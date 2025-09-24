@@ -1,0 +1,142 @@
+footer {
+  padding: 309px 64px 70px 64px;
+  position: relative;
+  width: calc(100% - 132px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    color: #D9EEFE;
+    cursor: pointer;
+  }
+}
+
+.bottom__info {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 2;
+  opacity: 0.8;
+
+  div {
+    max-width: 243px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.logo_footer {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  font-weight: 200;
+  line-height: 1.2;
+}
+
+.background {
+  border-top: 1px solid #3e3f3f;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #078EFA0A;
+  backdrop-filter: blur(5px);
+}
+
+@media (max-width: 1024px) {
+  footer {
+    padding: 249px 0 70px 0;
+  }
+
+  .bottom__info {
+    padding: 0 16px !important;
+    font-size: 15px;
+  }
+
+  .logo_footer {
+    position: absolute;
+    z-index: -1;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    font-weight: 200;
+    line-height: 1.2;
+  }
+
+  .background {
+    border-top: 1px solid #3e3f3f;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #078EFA0A;
+    backdrop-filter: blur(5px);
+  }
+
+}
+
+@media (max-width: 767px) {
+  footer {
+    width: calc(100% - 36px);
+  }
+}
+
+@media (max-width: 645px) {
+
+  footer {
+    padding: 209px 0 70px 0;
+  }
+  .bottom__info {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 168px;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 2;
+    opacity: 0.8;
+
+    div {
+      max-width: 100px;
+      order: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 120px;
+    }
+
+    p {
+      order: 2;
+    }
+  }
+
+  .background {
+    backdrop-filter: blur(3px);
+  }
+
+  .logo_footer {
+    top: 23%;
+    font-size: 45px;
+  }
+}

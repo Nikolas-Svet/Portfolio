@@ -1,0 +1,36 @@
+.cookies {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+  bottom: 32px;
+  backdrop-filter: blur(10px);
+  z-index: 200;
+  border: 1px solid rgba(255,255,255,0.2);
+  max-width: 900px;
+  width: 100%;
+  padding: 16px;
+  border-radius: 16px;
+  display: flex;
+  align-items: flex-end;
+  background: $primary-white;
+  transition: 0.5s;
+  * {
+    color: $primary-black;
+  }
+  &__btn {
+    text-transform: uppercase;
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    border: 1px solid $primary-purple;
+    color: $primary-purple;
+    margin-left: 16px;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

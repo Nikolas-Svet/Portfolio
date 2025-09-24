@@ -1,0 +1,275 @@
+.call {
+  transform: translateX(100%);
+  background-color: $background-white;
+  position: fixed;
+  right: 0;
+  z-index: -112;
+  height: 100dvh;
+  max-width: 436px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+
+  input, select, textarea {
+    transition: border 0.2s ease-in-out !important;
+  }
+
+  &__wrap {
+    position: fixed;
+    inset: 0;
+    z-index: -110;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease;
+  }
+
+  &__header {
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $default-green;
+
+    span {
+      color: $default-white;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .icon-close {
+      cursor: pointer;
+      height: 12px;
+      width: 12px;
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        width: 16px;
+        height: 2px;
+        background-color: $default-white;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        width: 16px;
+        height: 2px;
+        background-color: $default-white;
+      }
+    }
+  }
+
+  #selects, #review-selects {
+    transition: border 0.2s ease-in-out !important;
+    position: relative;
+    clip-path: inset(-16px -27px 0px -33px);
+  }
+
+  &__selects {
+    position: absolute;
+    z-index: 1;
+    display: none;
+    box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.1);
+    clip-path: inset(0px -14px -14px -14px);
+    flex-direction: column;
+    width: 100%;
+    border-radius: 0 0 8px 8px;
+  }
+
+  #review_main {
+    display: flex;
+    align-items: center;
+    .call__stars {
+      margin-bottom: -2px;
+    }
+  }
+
+  &__select, &__review {
+    padding: 8px 12px 8px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+    cursor: pointer;
+    color: $default-black;
+    background-color: $default-white;
+
+    &:hover {
+    }
+
+    &:disabled {
+      opacity: 0.7;
+    }
+  }
+
+  &__info {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+    border-top: 1px solid $default-black-opacity;
+    background-color: $default-white;
+    color: $default-black-opacity;
+    padding: 8px 12px 12px 12px;
+    border-radius: 0 0 8px 8px;
+  }
+
+  &__content {
+    height: calc(100dvh - 150px);
+    overflow: auto;
+    padding: 48px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__block {
+    margin-bottom: 25px;
+    width: 100%;
+    position: relative;
+
+    p {
+      position: relative;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: $default-black;
+      margin-bottom: 3px;
+    }
+
+    input, select, button {
+      width: 100%;
+      outline: none;
+      border: 1px solid $default-black-opacity;
+      background-color: $default-white;
+      border-radius: 2px;
+      height: 40px;
+      padding: 8px 12px;
+
+      &::placeholder {
+        font-size: 14px;
+        font-weight: 400;
+        color: $default-black;
+      }
+    }
+
+    #selects, #review-selects {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      outline: none;
+      border: 1px solid $default-black-opacity;
+      background-color: $default-white;
+      border-radius: 2px;
+      height: 40px;
+      padding: 8px 12px;
+    }
+
+    textarea {
+      width: 100%;
+      outline: none;
+      border: 1px solid $default-black-opacity;
+      background-color: $default-white;
+      border-radius: 2px;
+      height: 160px;
+      padding: 12px;
+      resize: none;
+
+      &::placeholder {
+        font-size: 14px;
+        font-weight: 400;
+        color: $default-black;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid $default-black-opacity;
+    background-color: $default-white;
+    padding: 24px 32px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    button {
+      width: 50%;
+      height: 45px;
+      outline: none;
+      border-radius: 2px;
+      font-size: 14px;
+      font-weight: 600;
+
+      &:first-child {
+        background-color: transparent;
+        border: 1px solid $default-green;
+        color: $default-green;
+      }
+
+      &:last-child {
+        border: none;
+        background-color: $default-green;
+        color: $default-white;
+      }
+
+    }
+  }
+
+  &__send, &__send__review {
+    border: none;
+    background-color: $default-green;
+    color: $default-white;
+  }
+
+  #review1, #review2, #review3, #review4, #review5, .review1, .review2, .review3, .review4, .review5 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #review1, #review2, .review1, .review2 {
+    svg {
+      path {
+        fill: #E63946 !important;
+      }
+    }
+  }
+
+  #review3, .review3 {
+    svg {
+      path {
+        fill: $default-yellow !important;
+      }
+    }
+  }
+
+  &__stars {
+    display: flex;
+    align-items: center;
+
+    svg {
+      width: 19px;
+      height: 19px;
+      margin-left: 8px;
+
+    }
+  }
+}

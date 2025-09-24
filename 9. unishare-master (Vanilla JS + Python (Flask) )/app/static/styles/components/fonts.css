@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "Inter";
+    src: local("Inter"), url("/static/fonts/Inter/Inter.ttf") format("truetype"), url("/static/fonts/Inter/Inter.woff") format("woff"), url("/static/fonts/Inter/Inter.woff2") format("woff2");
+    /*font-weight: 700;*/
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Anek Devanagari";
+    src: local("Anek_Devanagari"), url("/static/fonts/Anek_Devanagari/AnekDevanagari-Bold.ttf") format("truetype"), url("/static/fonts/Anek_Devanagari/AnekDevanagari-Bold.woff") format("woff"), url("/static/fonts/Anek_Devanagari/AnekDevanagari-Bold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+}

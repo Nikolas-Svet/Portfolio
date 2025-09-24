@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/header/logo.svg') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='libs/swiper/swiper-bundle.min.css') }}"/>
+
+{#    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">#}
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/dist/styles.css') }}">
+  {% block title %}{% endblock %}
+</head>
+<body>
+
+{% include 'components/elements/header.html' %}
+{% include 'components/elements/navigation_menu.html' %}
+{% block body %}
+{% endblock %}
+{% include 'components/elements/description.html' %}
+{% include 'components/elements/footer.html' %}
+
+<script src="{{ url_for('static', filename='libs/swiper/swiper-bundle.min.js') }}"></script>
+
+{#<script src="{{ url_for('static', filename='scripts/header.js') }}"></script>#}
+<script type="module" src="{{ url_for('static', filename='scripts/dist/header.js') }}"></script>
+{#<script src="{{ url_for('static', filename='scripts/reviews-swiper.js') }}"></script>#}
+<script type="module" src="{{ url_for('static', filename='scripts/dist/reviews-swiper.js') }}"></script>
+{#<script src="{{ url_for('static', filename='scripts/navigation_menu.js') }}"></script>#}
+<script type="module" src="{{ url_for('static', filename='scripts/dist/navigation_menu.js') }}"></script>
+{#<script src="{{ url_for('static', filename='scripts/theme.js') }}"></script>#}
+<script type="module" src="{{ url_for('static', filename='scripts/dist/theme.js') }}"></script>
+{% block scripts %}{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,213 @@
+.base {
+  &__header {
+    margin-top: 150px;
+    margin-bottom: 48px;
+    gap: 32px;
+  }
+
+  &__left {
+    min-width: 493px;
+    h2 {
+      font-weight: 500;
+      font-size: 40px;
+    }
+
+    div {
+      margin-left: 14px;
+      font-size: 43px;
+      font-weight: 700;
+
+      position: relative;
+      color: $primary-black;
+      &:after {
+        position: absolute;
+        color: $primary-white;
+        height: 100%;
+        width: 100%;
+        background-color: $primary-purple;
+        z-index: -1;
+        content: "UniShare";
+        left: 0;
+        bottom: -6px;
+        clip-path: inset(0 100% 9px 0);
+        transition: clip-path 0.5s ease;
+      }
+    }
+  }
+
+  &__right {
+    max-width: 490px;
+    font-size: 22px;
+    font-weight: 400;
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.anim_scroll {}
+
+.anim_scroll_active {
+  &:after {
+    transition: clip-path 0.5s ease !important;
+    clip-path: inset(0 0 9px 0) !important;
+    z-index: 1 !important;
+  }
+}
+
+.anim_scroll_active2 {
+  &:after {
+    content: "Zielgruppe" !important;
+    transition: clip-path 0.5s ease !important;
+    clip-path: inset(0 0 9px 0) !important;
+    z-index: 1 !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .base {
+    &__header {
+      margin-top: 125px;
+      margin-bottom: 40px;
+    }
+
+    &__left {
+      h2 {
+        font-weight: 500;
+        font-size: 35px;
+      }
+
+      div {
+        font-size: 38px;
+        font-weight: 700;
+      }
+    }
+
+    &__right {
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
+}
+
+@media (max-width: 934px) {
+  .base {
+    &__header {
+      margin-top: 100px;
+      margin-bottom: 32px;
+    }
+
+    &__left {
+      min-width: 0 !important;
+      align-items: center !important;
+      h2 {
+        font-size: 28px;
+      }
+
+      div {
+        margin-left: 8px;
+        font-size: 30px;
+      }
+    }
+
+    &__right {
+      font-size: 17px;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .base {
+    &__left {
+      h2 {
+        font-size: 24px;
+      }
+
+      div {
+        font-size: 26px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .base {
+    &__header {
+      margin-top: 60px;
+      margin-bottom: 20px;
+      flex-direction: column;
+      align-items: center !important;
+      gap: 16px;
+    }
+
+    &__left {
+      max-width: none !important;
+      justify-content: center;
+      align-items: center !important;
+
+      h2 {
+        font-size: 30px;
+      }
+
+      div {
+        font-size: 31px;
+        margin-left: 10px !important;
+
+        &:after {
+          bottom: -4px;
+        }
+      }
+    }
+
+    &__right {
+      max-width: 373px !important;
+      text-align: center;
+    }
+  }
+}
+@media (max-width: 550px) {
+  .base {
+    &__header {
+      margin-top: 50px;
+    }
+
+    &__left {
+      h2 {
+        font-size: 23px;
+      }
+
+      div {
+        font-size: 24px;
+      }
+    }
+
+  }
+}
+
+@media (max-width: 455px) {
+  .anim_scroll_active:after {
+    clip-path: inset(0 0 6px 0) !important;
+  }
+    .anim_scroll_active2:after {
+    clip-path: inset(0 0 4px 0) !important;
+  }
+  .base {
+    &__left {
+      h2 {
+        font-size: 18px;
+      }
+      div {
+        margin-left: 6px !important;
+        font-size: 20px;
+        &:after {
+          bottom: -4px;
+        }
+      }
+    }
+
+    &__right {
+      font-size: 14px;
+    }
+  }
+}

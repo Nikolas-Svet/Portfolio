@@ -1,0 +1,18 @@
+{% extends 'layouts/base.html' %}
+
+
+{% block title %}
+    <title>Solar Best - Photovoltaik vom fachmann</title>
+{% endblock %}
+
+{% block body %}
+    {% include 'components/elements/popup.html' %}
+    {% include 'components/parts/index/main.html' %}
+    {% include 'components/parts/index/callToAction.html' %}
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='scripts/call-to-action.js') }}"></script>
+    <script src="{{ url_for('static', filename='scripts/popup.js') }}"></script>
+    {#<script src="{{ url_for('static', filename='scripts/dist/call-to-action.js') }}"></script>#}
+{% endblock %}

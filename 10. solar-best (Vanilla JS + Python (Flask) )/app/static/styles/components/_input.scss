@@ -1,0 +1,66 @@
+.input {
+  position: relative;
+  margin-bottom: 24px;
+  height: 44px;
+
+  &:last-child {
+    margin-bottom: 0;
+    height: 105px;
+  }
+
+  input {
+    color: #232323;
+    border: 1px solid #D9D9D9;
+    height: 100%;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 9px 16px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    transition: 0.2s;
+    outline: none;
+
+    &:hover {
+      border-color: #39AB37;
+    }
+
+    &:last-child {
+      height: 105px;
+    }
+  }
+
+  input:focus {
+    border-color: #00B74A;
+    box-shadow: 0 0 5px 2px rgb(5, 107, 0 , 0.15);
+  }
+
+  input:focus + label,
+  input:not(:placeholder-shown) + label {
+    opacity: 1;
+    transform: translateY(-6px);
+    font-size: 12px;
+    color: var(--grey-dark);
+    background: white;
+    padding: 2px;
+  }
+
+  label {
+    opacity: 0.5;
+    position: absolute;
+    pointer-events: none;
+    left: 18px;
+    top: 0;
+    transition: 0.3s ease all;
+    padding: 14px 0;
+    color: #232323;
+  }
+}
+
+@media (max-width: 400px) {
+  .input {
+    input, label {
+      font-size: 14px;
+    }
+  }
+}

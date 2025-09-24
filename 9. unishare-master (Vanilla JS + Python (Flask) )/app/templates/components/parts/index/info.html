@@ -1,0 +1,86 @@
+<section class="info">
+    <div class="info__content container__main">
+        <div class="info__header base__header">
+            <div class="info__header-left base__left">
+                <h2>Das bietet</h2>
+                <div class="anim_scroll">UniShare</div>
+            </div>
+            <div class="info__header-right base__right">
+                Mit UniShare nutzen Sie alle Sharing-Dienste, smarte Funktionen und transparente Lösungen – in einer
+                App.
+            </div>
+        </div>
+        <div class="info__blocks">
+            <div class="info__block">
+                <div class="info__text">
+                    <div class="info__block-title">
+                        Umfassende Integration
+                    </div>
+                    <div class="info__block-subtitle">
+                        Alle verfügbaren Sharing-Dienste der Stadt – von Carsharing über E-Scooter bis hin zu E-Bikes –
+                        in einer
+                        einzigen App.
+                    </div>
+                </div>
+                <img src="{{ url_for('static', filename='images/index/info1.webp') }}" alt="">
+            </div>
+            <div class="info__block">
+                <div class="info__text">
+                    <div class="info__block-title">
+                        Einfache Suche und Vergleich
+                    </div>
+                    <div class="info__block-subtitle">
+                        Schnelle Suche nach Fahrzeugen in Ihrer Nähe und bequemer Vergleich der Anbieter auf einer
+                        einzigen Karte.
+                    </div>
+                </div>
+                <img src="{{ url_for('static', filename='images/index/info2.webp') }}" alt="">
+            </div>
+            <div class="info__block">
+                <div class="info__text">
+                    <div class="info__block-title">
+                        Einheitliches Buchungssystem
+                    </div>
+                    <div class="info__block-subtitle">
+                        Ein Konto für die Buchung jedes Verkehrsmittels – ohne zusätzliche Apps installieren zu müssen.
+                    </div>
+                </div>
+                <img src="{{ url_for('static', filename='images/index/info3.webp') }}" alt="">
+            </div>
+            <div class="info__block">
+                <div class="info__text">
+                    <div class="info__block-title">
+                        Intelligente Routenplanung
+                    </div>
+                    <div class="info__block-subtitle">
+                        Optimierte Routen mit der Möglichkeit, verschiedene Sharing-Optionen zu kombinieren, für eine
+                        bequeme und schnelle Fahrt.
+                    </div>
+                </div>
+                <img src="{{ url_for('static', filename='images/index/info4.webp') }}" alt="">
+            </div>
+            <div class="info__block">
+                <div class="info__text">
+                    <div class="info__block-title">
+                        Volle Preistransparenz
+                    </div>
+                    <div class="info__block-subtitle">
+                        Alle Kosten im Voraus einsehen und die beste Option für Ihre Bedürfnisse auswählen.
+                    </div>
+                </div>
+                <img src="{{ url_for('static', filename='images/index/info5.webp') }}" alt="">
+            </div>
+            <div class="info__block">
+                <div class="last-block">
+                    <span>Probieren Sie unsere App selbst aus!</span>
+                    <a href="http://app-demo.delo-gmbh.de/">Zur Demo gehen</a>
+                </div>
+            </div>
+            <a href="http://app-demo.delo-gmbh.de/" class="info__mobile">
+                Zur Demo gehen
+                {% include 'components/icons/arrow.html' %}
+            </a>
+        </div>
+    </div>
+
+</section>

@@ -1,0 +1,33 @@
+.h1 {
+  color: #232323;
+}
+
+.wrap {
+  background: url("/static/images/agb/background.webp") no-repeat center !important;
+  background-size: cover !important;
+}
+
+.agb {
+  &__logo {
+  }
+
+  &-content {
+    display: flex;
+    justify-content: center;
+    padding: 85px 0 417px 0 !important;
+    align-items: center !important;
+
+    img {
+      width: 100%;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+      font-weight: 700;
+      font-size: 32px;
+      text-transform: uppercase;
+      color: #232323;
+    }
+  }
+}

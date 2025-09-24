@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  overscroll-behavior: none;
+}
+
+body {
+  width: 100dvw;
+  min-height: 100dvh;
+}
+
+.container__main {
+  max-width: 1240px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.container__auth {
+  max-width: 840px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+button, a {
+  outline: none;
+  cursor: pointer;
+}
+
+input, select {
+  outline: none;
+}
+
+/*# sourceMappingURL=main.css.map */

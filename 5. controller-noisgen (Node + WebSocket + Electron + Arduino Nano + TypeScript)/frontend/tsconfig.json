@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "lib": ["ESNext", "DOM"],
+    "outDir": "./dist",
+    "rootDir": "./",
+    "strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "isolatedModules": false,
+    "noEmit": false,
+    "jsx": "preserve",
+    "allowJs": true,
+    "types": ["node", "electron"],
+    "noImplicitAny": true,
+    "strictNullChecks": true
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules"]
+}

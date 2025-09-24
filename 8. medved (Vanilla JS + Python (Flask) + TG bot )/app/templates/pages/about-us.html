@@ -1,0 +1,25 @@
+{% extends 'layouts/base.html' %}
+
+
+{% block title %}
+<title>СИБАЛЯСКАТРЕВЕЛ - О компании</title>
+{% endblock %}
+
+{% block body %}
+{% include 'components/parts/about-us/main.html' %}
+{% include 'components/parts/about-us/info.html' %}
+{% include 'components/parts/about-us/transport.html' %}
+{% include 'components/parts/about-us/taking-care.html' %}
+{% include 'components/parts/about-us/organization.html' %}
+{% include 'components/parts/about-us/call.html' %}
+{% include 'components/parts/about-us/details.html' %}
+{% include 'components/parts/index/reviews.html' %}
+{% endblock %}
+
+{% block scripts %}
+<!--<script src="{{ url_for('static', filename='scripts/list-trips.js') }}"></script>-->
+<!--<script src="{{ url_for('static', filename='scripts/message.js') }}"></script>-->
+<script src="{{ url_for('static', filename='scripts/dist/list-trips.js') }}"></script>
+<script src="{{ url_for('static', filename='scripts/dist/message.js') }}"></script>
+{% endblock %}
+

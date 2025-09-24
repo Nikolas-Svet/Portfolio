@@ -1,0 +1,168 @@
+.banner {
+  width: 100%;
+  margin-bottom: 50px;
+
+  .ipad {
+    display: none;
+
+    &-del {
+    }
+  }
+
+  &__content {
+    margin-top: 96px;
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  &__img {
+    position: relative;
+    width: 100%;
+    height: 344px;
+    border-radius: 8px;
+    background: url("/static/images/index/banner.webp") no-repeat center;
+    background-size: cover;
+  }
+
+  &__block {
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    bottom: 48px;
+    padding: 0 48px;
+  }
+
+  &__sale {
+    background-color: $default-green;
+    display: flex;
+    flex-direction: column;
+    padding: 18px 10px 18px 16px;
+    max-width: 180px;
+    width: 100%;
+
+    color: $default-white;
+
+    span {
+      margin-top: -21px;
+      margin-bottom: -8px;
+      font-size: 64px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    p {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.2;
+      text-align: center;
+    }
+  }
+
+  &__info {
+    max-width: 550px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    div {
+      background-color: $default-green;
+      color: $default-white;
+      font-size: 19px;
+      font-weight: 400;
+      text-align: left;
+      padding: 10px;
+
+      &:first-child {
+        width: 28%;
+      }
+
+      &:nth-child(2) {
+        width: 29%;
+      }
+
+      &:last-child {
+        width: 30%;
+      }
+    }
+  }
+
+}
+
+
+@media (max-width: 900px) {
+  .ipad {
+    display: flex !important;
+
+    &-del {
+      display: none;
+    }
+  }
+
+  .banner {
+    padding: 0;
+    margin-bottom: 40px;
+
+    &__content {
+      margin-top: 76px;
+    }
+
+    &__img {
+      padding: 32px;
+    }
+
+    &__block {
+      padding: 0;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .banner {
+    &__img {
+      padding: 42px 0 0 0;
+    }
+
+    &__block {
+      bottom: 0;
+      left: 0;
+      background-color: $default-green;
+      border-radius: 0 0 8px 8px;
+    }
+
+    &__info {
+      max-width: none;
+      div {
+        font-size: 14px;
+        width: 33% !important;
+        background-color: transparent;
+      }
+    }
+
+    &__sale {
+      max-width: 142px;
+      span {
+        margin-top: -15px;
+        margin-bottom: -4px;
+        font-size: 38px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .banner {
+    &__info {
+      padding: 5px;
+      div {
+        font-size: 12px;
+        padding: 0;
+      }
+    }
+  }
+}

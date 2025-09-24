@@ -1,0 +1,16 @@
+<header class="header container__main">
+    <div class="header__content">
+        <a href="/" class="header__logo">
+            <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="">
+        </a>
+        <nav class="header__nav">
+            <a id="nav_1" href="#main">Plattform</a>
+            <a id="nav_2" href="#nav2">Zielgruppe</a>
+            <a id="nav_3" href="#nav3">Schritte</a>
+        </nav>
+        <a href="http://app-demo.delo-gmbh.de/" class="header__button">
+            Demo öffnen
+            {% include 'components/icons/arrow.html' %}
+        </a>
+    </div>
+</header>

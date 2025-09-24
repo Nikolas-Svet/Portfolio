@@ -1,0 +1,92 @@
+<section class="reviews">
+    <div class="reviews__header container__main">
+        <h3>Отзывы наших клиентов</h3>
+        <nav class="reviews__nav">
+            <span class="call__rev">
+                <img src="{{ url_for('static', filename='images/index/comment.svg') }}" alt="">
+                Оставить отзыв
+            </span>
+        </nav>
+    </div>
+    <div id="reviews" class="reviews__content">
+        <div class="reviews__block">
+            <div class="reviews__block__header">
+                {% include 'components/icons/star.html' %}
+                <span>5/5</span>
+            </div>
+            <span class="reviews__block__text">
+                Отличный сервис и комфорт! Я пользовался регулярными рейсами этой транспортной фирмы несколько раз, и каждый раз оставался доволен. Автобусы всегда чистые, водители вежливые, а расписание соблюдается. Рекомендую всем!
+            </span>
+            <div class="reviews__block__footer">
+                <p>Дмитрий</p>
+                <span>Кемерово</span>
+            </div>
+        </div>
+        <div class="reviews__block">
+            <div class="reviews__block__header">
+                {% include 'components/icons/star.html' %}
+                <span>5/5</span>
+            </div>
+            <span class="reviews__block__text">
+                Удобно и быстро! Понравилось, что отвечают быстро по W/A. Поездки проходят без задержек. Очень удобно добираться до работы в Шерегеш!
+            </span>
+            <div class="reviews__block__footer">
+                <p>Светлана</p>
+                <span>Новосибирск</span>
+            </div>
+        </div>
+        <div class="reviews__block">
+            <div class="reviews__block__header">
+                {% include 'components/icons/star.html' %}
+                <span>5/5</span>
+            </div>
+            <span class="reviews__block__text">
+                Поездка была комфортной, автобус чистый и просторный. Очень понравились живописные пейзажи Сибири и удобное бронирование онлайн! Вернусь к Вам снова!
+            </span>
+            <div class="reviews__block__footer">
+                <p>Александр</p>
+                <span>Москва</span>
+            </div>
+        </div>
+        <div class="reviews__block">
+            <div class="reviews__block__header">
+                {% include 'components/icons/star.html' %}
+                <span>5/5</span>
+            </div>
+            <span class="reviews__block__text">
+                Идеальный выбор для выездных корпоративов. Мы заказали автобус для корпоративной поездки, и все прошло на высшем уровне! Водитель был пунктуален, автобус был чистым и комфортным. Все коллеги остались в восторге!
+            </span>
+            <div class="reviews__block__footer">
+                <p>Сергей</p>
+                <span>Новосибирск</span>
+            </div>
+        </div>
+        <div class="reviews__block">
+            <div class="reviews__block__header">
+                {% include 'components/icons/star.html' %}
+                <span>5/5</span>
+            </div>
+            <span class="reviews__block__text">
+                Заказывали автобус для экскурсии с детьми. Остались очень довольны. Документы оформляют сами и очень оперативно. Экскурсия прошла отлично, спасибо за профессионализм!
+            </span>
+            <div class="reviews__block__footer">
+                <p>Наталья</p>
+                <span>Новосибирск</span>
+            </div>
+        </div>
+        <div class="reviews__block">
+            <div class="reviews__block__header">
+                {% include 'components/icons/star.html' %}
+                <span>5/5</span>
+            </div>
+            <span class="reviews__block__text">
+                Пользуемся услугами этой фирмы для доставки сотрудников на работу. Автобусы всегда вовремя. Спасибо!
+            </span>
+            <div class="reviews__block__footer">
+                <p>Варвара</p>
+                <span>Новосибирск</span>
+            </div>
+        </div>
+        <div class="reviews__block"></div>
+    </div>
+</section>

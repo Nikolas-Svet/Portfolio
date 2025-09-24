@@ -1,0 +1,24 @@
+{% extends 'layouts/base.html' %}
+
+
+{% block title %}
+  <title>Codezilla</title>
+{% endblock %}
+
+{% block body %}
+  <div class="main-container">
+    {% include 'components/parts/index/main.html' %}
+    {% include 'components/parts/index/projects.html' %}
+    {% include 'components/parts/index/highlights.html' %}
+    {% include 'components/parts/index/scroll-panel.html' %}
+  </div>
+{% endblock %}
+
+{% block scripts %}
+  <script src="{{ url_for('static', filename='scripts/animation_words.js') }}"></script>
+{#  <script src="{{ url_for('static', filename='scripts/projects-animation.js') }}"></script>#}
+  <script src="{{ url_for('static', filename='scripts/dist/projects-animation.js') }}"></script>
+{#  <script src="{{ url_for('static', filename='scripts/scroll-panel.js') }}"></script>#}
+  <script src="{{ url_for('static', filename='scripts/dist/scroll-panel.js') }}"></script>
+{% endblock %}
+

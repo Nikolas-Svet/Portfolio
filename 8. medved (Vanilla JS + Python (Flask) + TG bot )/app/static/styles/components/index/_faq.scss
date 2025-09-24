@@ -1,0 +1,140 @@
+.mobile-faq {
+  display: none !important;
+}
+
+.faq {
+  width: 100%;
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+  &__column {
+    width: calc(50% - 12px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__title {
+    width: 100%;
+    margin: 80px 0 35px 0;
+
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+      color: $default-black;
+    }
+  }
+
+  &__button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    button {
+      width: 175px;
+      height: 35px;
+      border: 1px solid $default-black;
+      color: $default-black;
+      background-color: transparent;
+      outline: none;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+
+  &__block {
+    cursor: pointer;
+    flex: 0 1 auto;
+    width: 100%;
+    border-bottom: 1px solid $default-black-opacity;
+    padding-bottom: 20px;
+
+  }
+
+  &__text {
+    margin-top: 12px;
+    font-weight: 400;
+    color: $default-black;
+    line-height: 1.5;
+    display: none;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+      font-size: 16px;
+      font-weight: 600;
+      color: $default-black;
+    }
+  }
+
+  .icon-arrow {
+    min-width: 8px;
+    min-height: 8px;
+  }
+}
+
+
+@media(max-width: 900px) {
+  .faq {
+    &__content {
+      gap: 18px;
+    }
+
+    &__column {
+      width: calc(50% - 9px);
+      gap: 18px;
+    }
+
+    &__title {
+      margin: 62px 0 28px 0;
+      font-size: 17px;
+    }
+
+    &__block {
+      padding-bottom: 16px;
+
+    }
+
+    &__text {
+      margin-top: 10px;
+      font-size: 15px;
+    }
+
+    &__info {
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .mobile-faq {
+    display: flex !important;
+  }
+  .faq {
+    &__content {
+      justify-content: center;
+    }
+    &__title {
+      max-width: 550px;
+      font-size: 20px;
+      text-align: left;
+    }
+    &__column {
+      width: 100%;
+      max-width: 550px;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+    {#    <link rel="stylesheet" href="{{ url_for('static', filename='styles/dist/styles.css') }}">#}
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.svg') }}">
+    {% block title %}{% endblock %}
+</head>
+<body>
+<div class="cookies" id="cookies">
+    <div class="cookies__content">
+        <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="">
+        <span>Diese Webseite verwendet Cookies</span>
+        <p class="cookies__text">
+            Wir setzen Cookies ein, um die Nutzung der Webseite für den Besucher einfacher und bequemer zu gestalten
+            bzw.
+            bestimmte Funktionen überhaupt erst zu ermöglichen. Durch die Nutzung dieser Webseite erklären Sie sich mit
+            der
+            Verwendung von Cookies einverstanden. Weitere Infos entnehmen Sie unserer
+            <a href="/data-protection/#cookiesYak" target="_blank">Datenschutzerklärung</a>.
+        </p>
+        <div class="cookies__content__toggle-switchs">
+            <div class="cookies__content__toggle-switchs__block">
+                <p>
+                    Marketing
+                </p>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                    <span class="icon__check"></span>
+                    <img src="{{ url_for('static', filename='images/cancel.svg') }}" alt="">
+                </label>
+            </div>
+            <div class="cookies__content__toggle-switchs__block">
+                <p>
+                    Essenziell
+                </p>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                    <span class="icon__check"></span>
+                    <img src="{{ url_for('static', filename='images/cancel.svg') }}" alt="">
+                </label>
+            </div>
+            <div class="cookies__content__toggle-switchs__block">
+                <p>
+                    Funktionell
+                </p>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                    <span class="icon__check"></span>
+                    <img src="{{ url_for('static', filename='images/cancel.svg') }}" alt="">
+                </label>
+            </div>
+        </div>
+        <div class="cookies__content__btn" >
+            <button id="cancelBtn" onclick="cancel_cookies()">Ablehnen</button>
+            <button id="cookiesBtn">Akzeptieren</button>
+        </div>
+    </div>
+</div>
+
+{% block body %}{% endblock %}
+{% include 'components/elements/Footer.html' %}
+
+<script type="module" src="{{ url_for('static', filename='scripts/select.js') }}"></script>
+{#<script type="module" src="{{ url_for('static', filename='scripts/dist/select.js') }}"></script>#}
+
+<script type="module" src="{{ url_for('static', filename='scripts/anchor.js') }}"></script>
+{#<script type="module" src="{{ url_for('static', filename='scripts/dist/anchor.js') }}"></script>#}
+
+<script type="module" src="{{ url_for('static', filename='scripts/cookies.js') }}"></script>
+{#<script type="module" src="{{ url_for('static', filename='scripts/dist/cookies.js') }}"></script>#}
+
+{% block scripts %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,24 @@
+{% extends 'layouts/base.html' %}
+
+
+{% block title %}
+  <title>UniShare</title>
+{% endblock %}
+
+{% block body %}
+    {% include 'components/parts/index/main.html' %}
+    {% include 'components/parts/index/info.html' %}
+    {% include 'components/parts/index/border.html' %}
+    {% include 'components/parts/index/group.html' %}
+    {% include 'components/parts/index/groupTwo.html' %}
+    {% include 'components/parts/index/difference.html' %}
+    {% include 'components/parts/index/steps.html' %}
+{% endblock %}
+
+{% block scripts %}
+  <script src="{{ url_for('static', filename='scripts/difference.js') }}"></script>
+<!--  <script src="{{ url_for('static', filename='scripts/dist/difference.js') }}"></script>-->
+  <script src="{{ url_for('static', filename='scripts/scroll.js') }}"></script>
+<!--  <script src="{{ url_for('static', filename='scripts/dist/scroll.js') }}"></script>-->
+{% endblock %}
+

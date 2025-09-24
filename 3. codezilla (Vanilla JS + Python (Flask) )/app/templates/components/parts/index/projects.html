@@ -1,0 +1,128 @@
+<div class="projects" id="projects">
+    <span class="projects__running-line-vertical projects__running-line-vertical-left"></span>
+    <span class="projects__running-line-vertical projects__running-line-vertical-right"></span>
+    <span class="projects__running-line-horizontal projects__running-line-horizontal-left"></span>
+    <span class="projects__running-line-horizontal projects__running-line-horizontal-right"></span>
+
+
+    <span class="show1024 projects__running-line-vertical-central"></span>
+
+
+    <div class="projects__block flex-block">
+        <div class="delete1024"></div>
+        <div class="middle-line">
+            <div class="running-line"></div>
+        </div>
+        <div class="delete1024"></div>
+    </div>
+
+    <div class="projects__block flex-block">
+        <div class="delete1024"></div>
+        <div class="projects__title">
+            <p>Lösungen, die <br>
+                den Unterschied machen
+            </p>
+            <span>
+                Erfolgreiche Projekte beginnen mit
+                maßgeschneiderten, effizienten Lösungen.
+            </span>
+        </div>
+        <div class="delete1024"></div>
+    </div>
+
+    <div class="projects__block">
+        <span class="projects__block--horizontal-border"></span>
+        <span class="show1024 projects__block--horizontal-border"></span>
+        <div class="projects__website">
+            <div>
+                <p>
+                    Webentwicklung
+                </p>
+                <span>
+                    Alles aus einer Hand – von der
+                    Website-Erstellung bis zum langfristigen
+                    Support.
+                </span>
+            </div>
+            <div class="projects__website__anim">
+                {% include 'components/icons/projects/website.html' %}
+                <img class="cursor" src="{{ url_for('static', filename='images/index/projects/cursor.svg') }}" alt="">
+            </div>
+
+        </div>
+        <div class="projects__ai">
+            <div>
+                <p>
+                    KI-Lösungen
+                </p>
+                <span>
+                    Individuelle KI-Lösungen, die Ihre Prozesse
+                    optimieren und zukunftssicher gestalten.
+                </span>
+            </div>
+            {% include 'components/icons/projects/ai.html' %}
+        </div>
+        <div class="projects__mobile-apps">
+            <div>
+                <p>
+                    Mobile Apps
+                </p>
+                <span>
+                    Ihre App, perfekt umgesetzt – von der Idee
+                    bis zur erfolgreichen Markteinführung.
+                </span>
+            </div>
+            <div class="projects__mobile-apps__anim">
+                {% include 'components/icons/projects/mobile_apps.html' %}
+                {% include 'components/icons/projects/message.html' %}
+                {% include 'components/icons/projects/mobile-apps_phone.html' %}
+            </div>
+        </div>
+
+
+        <div class="projects__white-label">
+            <div>
+                <p>
+                    White Label
+                </p>
+                <span>
+                    Diskrete Unterstützung im Hintergrund –
+                    flexible White-Label-Lösungen für Ihren Erfolg.
+                </span>
+            </div>
+            <div class="projects__white-label__anim">
+                {% include 'components/icons/projects/white_label1.html' %}
+                {% include 'components/icons/projects/white_label2.html' %}
+                {% include 'components/icons/projects/white_label3.html' %}
+            </div>
+
+        </div>
+        <div class="projects__webshop">
+            <div>
+                <p>
+                    Webshops
+                </p>
+                <span>
+                    Reibungslose Shop-Lösungen, perfekt integriert
+                    und individuell auf Sie zugeschnitten.
+                </span>
+            </div>
+            <div class="projects__webshop__anim">
+                {% include 'components/icons/projects/webshop.html' %}
+                {#                <img class="cursor" src="{{ url_for('static', filename='images/index/projects/webshop_title.svg') }}" alt="">#}
+            </div>
+        </div>
+        <div class="projects__management">
+            <div>
+                <p>
+                    Projektmanagement
+                </p>
+                <span>
+                    Effizientes Projektmanagement, das
+                    Ihre Projekte zuverlässig zum Erfolg führt.
+                </span>
+            </div>
+            {% include 'components/icons/projects/management.html' %}
+        </div>
+    </div>
+</div>

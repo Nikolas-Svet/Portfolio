@@ -1,0 +1,66 @@
+@import "components/fonts";
+@import "components/variables";
+@import "components/header";
+@import "components/footer";
+@import "components/base";
+@import "components/cookies";
+@import "components/index/main";
+@import "components/index/info";
+@import "components/index/border";
+@import "components/index/group";
+@import "components/index/difference";
+@import "components/index/steps";
+@import "components/data-protection/main";
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
+
+button, a {
+  cursor: pointer;
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+  max-width: 100vw;
+  min-height: 100vh;
+  background: $primary-background;
+  color: $primary-white;
+  transition: 0.2s;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+
+  }
+}
+
+.container {
+  &__main {
+    width: 100%;
+    max-width: 1400px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+}
+
+.active_nav {
+  color: $primary-purple !important;
+}

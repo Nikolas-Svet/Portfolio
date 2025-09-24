@@ -1,0 +1,660 @@
+.white {
+  background: url("/static/images/background_white.webp") no-repeat center;
+  background-size: cover;
+
+  .logo {
+    min-width: 28px;
+    min-height: 28px;
+    background: url("/static/images/header/logo-dark.svg") no-repeat center center;
+    background-size: cover;
+  }
+
+  footer {
+    a {
+      color: #131313;
+    }
+  }
+
+  .no-index-page {
+    a {
+      color: #131313;
+    }
+
+    span {
+      border-left: 1.5px solid #131313;
+      border-bottom: 1.5px solid #131313;
+    }
+  }
+
+  .icons {
+    &:first-child {
+      border-color: #ffffff;
+    }
+
+    &:nth-child(2) {
+      background-color: #ffffff;
+    }
+
+    &:nth-child(3) {
+      border: 1px solid #ffffff;
+    }
+
+    &:last-child {
+      &:after {
+        background-color: #ffffff;
+      }
+
+      &:before {
+        background-color: #ffffff;
+      }
+    }
+  }
+
+  .tool-panel {
+    background-color: #ffffff;
+  }
+
+  .blue-border {
+    border-color: #078EFA !important;
+  }
+
+  .orange-color {
+    color: #FF4500 !important;
+    font-weight: 600;
+  }
+
+  .blue-close {
+    &:after, &:before {
+      background-color: #078EFA !important;;
+    }
+  }
+
+  .line-content {
+    opacity: 1;
+  }
+
+  .blue-color {
+    backdrop-filter: none;
+    border: none;
+    background-color: #078EFA !important;
+  }
+
+  .info-block {
+    &__content {
+      background: linear-gradient(150.55deg, rgba(255, 255, 255, 0.5) 0.87%, rgba(255, 255, 255, 0.7) 79.82%),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.01));
+    }
+  }
+
+  .icon-right-top {
+
+    svg {
+      g {
+        opacity: 1 !important;
+        fill: #7A7A7A !important;
+      }
+
+      &:hover {
+        path {
+          fill: #131313;
+          opacity: 1 !important;
+        }
+      }
+    }
+
+  }
+
+  .projects__management {
+
+    .mask-bg, .stroke-bg {
+      fill: #EAEAEA;
+      stroke: #FFFFFF;
+    }
+
+    &:hover {
+      .mask-bg, .stroke-bg {
+        fill-opacity: 0.8;
+      }
+    }
+  }
+
+  .header {
+    &__align-content {
+
+      &-left {
+        border-right: 1px dashed var(--header-border);
+        background: #FFFFFF4D;
+        backdrop-filter: blur(20px);
+      }
+
+      &-right {
+        border-left: 1px dashed var(--header-border);
+        background: #FFFFFF4D;
+        backdrop-filter: blur(20px);
+      }
+    }
+
+    &__justify-content {
+
+      &-top {
+        background: #FFFFFF4D;
+        backdrop-filter: blur(20px);
+      }
+
+      &-bottom {
+        z-index: 200;
+        border-top: 1px dashed var(--header-border);
+        position: fixed;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        bottom: 0;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.004) 0%, rgba(255, 255, 255, 0.02) 49.5%, rgba(255, 255, 255, 0.008) 100%);
+        backdrop-filter: blur(10px);
+
+        p {
+          font-size: 20px;
+          font-weight: 400;
+          color: #078EFA;
+        }
+      }
+    }
+  }
+
+  .projects {
+    &:after, &:before {
+      background: #C1C1C1;
+      height: 100%;
+      bottom: -1%;
+    }
+
+
+    &__title {
+      background: #FFFFFFB2 !important;
+      backdrop-filter: blur(20px)
+    }
+
+    &__block {
+
+      &--horizontal-border {
+        display: none;
+      }
+
+      &:before {
+        background: #C1C1C1;
+      }
+
+      .middle-line {
+        opacity: 0;
+
+        &:after {
+          background: #c1C1C1;
+        }
+      }
+
+      &:last-child {
+        &:after {
+          display: none;
+        }
+
+        &:before {
+          background: #C1C1C1;
+        }
+      }
+    }
+  }
+
+  .icon-left {
+    &__images {
+      transition: all 0.3s ease;
+      clip-path: inset(16px 0 0 0);
+
+      img {
+        &:first-child {
+          transition: all 0.3s ease;
+          margin-top: 0;
+        }
+      }
+
+      span {
+        &:first-child {
+          transition: all 0.3s ease;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  .icon-right {
+    &:hover {
+      svg {
+        path {
+          stroke: #131313;
+        }
+      }
+    }
+  }
+
+  #in {
+    path {
+      fill: #7A7A7A;
+      opacity: 1;
+    }
+
+    g {
+      opacity: 1;
+    }
+
+    &:hover {
+      path {
+        fill: #131313 !important;
+        opacity: 1;
+      }
+
+      g {
+        opacity: 1;
+      }
+    }
+  }
+
+  #whatsapp {
+    position: relative;
+
+    g {
+      opacity: 1;
+
+      path {
+        fill: transparent;
+      }
+
+      path:last-child {
+        fill: #E3F0F8;
+      }
+    }
+  }
+
+  .light_whatsapp {
+    display: block !important;
+    position: relative;
+    background-color: #7A7A7A;
+    border-radius: 50%;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-left: 3px solid transparent;
+      border-right: 3px solid transparent;
+      border-bottom: 6px solid #7A7A7A;
+      transform: rotate(-19deg);
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: #131313 !important;
+
+      &:after {
+        border-bottom: 6px solid #131313;
+      }
+    }
+  }
+
+  #inst {
+    background-color: #7a7a7a;
+    border-radius: 10px;
+    height: 29px;
+    width: 29px;
+    position: relative;
+    margin-top: -3px;
+
+    &:hover {
+      background-color: #131313 !important;
+    }
+
+    path {
+      fill: #E3F0F8 !important;
+      opacity: 1;
+    }
+  }
+
+
+  #location,
+  #message,
+  #phone {
+    svg {
+      opacity: 1;
+    }
+
+    path {
+      fill: #7A7A7A;
+      opacity: 1;
+    }
+
+    div {
+      background-color: #FFFFFF;
+
+      span {
+        border-bottom: 8px solid #FFFFFF;
+      }
+
+      p {
+        color: #131313;
+      }
+    }
+
+    &:hover {
+      svg {
+        opacity: 1 !important;
+      }
+
+      path {
+        stroke: #E3F0F8 !important;
+        opacity: 1 !important;
+        fill: #131313 !important;
+      }
+    }
+  }
+
+  .background {
+    border-top: 1px solid #C1C1C1;
+  }
+
+  .description__content {
+    border-left: 1px solid #C1C1C1;
+    border-right: 1px solid #C1C1C1;
+  }
+
+  .scroll-panel {
+    &:after {
+      opacity: 1;
+      background-color: #C1C1C1;
+    }
+
+    &:before {
+      opacity: 1;
+      background-color: #C1C1C1;
+    }
+  }
+
+  .highlights {
+    &__block {
+      border: 1px solid #C1C1C1;
+
+      &-left {
+        span {
+          border: 1px solid #C1C1C1;
+          background: #FFFFFF33;
+        }
+      }
+
+      &-right {
+        svg {
+          path {
+            fill: #C1C1C1 !important;
+          }
+        }
+      }
+    }
+  }
+
+  #panel_background {
+    fill: #EAEAEA !important;
+  }
+
+  .website {
+    #paint0_linear_1073_6 {
+      stop {
+        &:first-child {
+          stop-opacity: 0.5;
+        }
+
+        &:last-child {
+          stop-opacity: 0.7;
+        }
+      }
+    }
+
+    #paint1_linear_1073_6,
+    #paint2_linear_1073_6 {
+      stop {
+        &:first-child {
+          stop-opacity: 0.7;
+        }
+
+        &:last-child {
+          stop-opacity: 0.9;
+        }
+      }
+    }
+
+
+    g {
+      &:first-child {
+        fill: rgba(229, 229, 229, 0.3);
+        stroke: #FFFFFF;
+        stroke-opacity: 1;
+      }
+    }
+
+    .display {
+      display: block;
+    }
+
+    circle {
+      fill: #CCCCCC;
+    }
+
+    .circle {
+      &-1 {
+        opacity: 1;
+      }
+
+      &-2 {
+        opacity: 0.8;
+      }
+
+      &-3 {
+        opacity: 0.6;
+      }
+    }
+
+    &--border {
+      stroke: #F7FAFD;
+      stroke-opacity: 1;
+    }
+
+    &--url {
+      fill: #CCCCCC;
+      opacity: 0.6;
+    }
+  }
+
+  .ai {
+    path {
+      fill-opacity: 1;
+    }
+
+    #paint0_linear_334_950,
+    #paint1_linear_334_950 {
+      stop {
+        stop-color: #C1C1C1;
+        stop-opacity: 1;
+      }
+    }
+  }
+
+  .mobile-apps {
+    &--bg {
+      fill-opacity: 1;
+    }
+
+    &--border {
+      stroke: #F7FAFD;
+      stroke-opacity: 1;
+    }
+
+    path {
+      fill: #CCCCCC;
+      opacity: 1;
+    }
+
+    #paint0_linear_334_913 {
+      stop {
+        &:first-child {
+          stop-opacity: 0.5;
+        }
+
+        &:last-child {
+          stop-opacity: 0.7;
+        }
+      }
+    }
+
+    #paint1_linear_334_913,
+    #paint2_linear_334_913 {
+      stop {
+        &:first-child {
+          stop-opacity: 0.7;
+        }
+
+        &:last-child {
+          stop-opacity: 0.9;
+        }
+      }
+    }
+  }
+
+  .mobile-apps-message {
+    rect {
+      fill: #c1C1C1;
+    }
+
+    #paint0_linear_334_917,
+    #paint1_linear_334_917 {
+      stop {
+        stop-color: #EAEAEA;
+      }
+    }
+  }
+
+  .mobile-apps-phone {
+    #paint0_linear_135_1030,
+    #paint1_linear_135_1030 {
+      stop {
+        &:last-child {
+          stop-color: #0683E8;
+        }
+      }
+    }
+  }
+
+  .white-label {
+    &-1 {
+      path {
+        stroke: #c1c1c1;
+        stroke-opacity: 1;
+      }
+
+      .circle4_anim2,
+      .circle1_anim2 {
+        fill: #c1c1c1;
+      }
+
+      .circle2_anim2 {
+        stroke: #D9EEFE;
+        fill: #C1C1C1;
+        fill-opacity: 1;
+      }
+    }
+
+    &-2 {
+      path {
+        stroke-opacity: 1;
+        stroke: #c1c1c1;
+      }
+
+      .circle_anim1,
+      .circle2_anim1 {
+        fill: #c1c1c1;
+      }
+
+      .circle-main {
+        fill: #c1c1c1;
+        fill-opacity: 1;
+      }
+    }
+
+    &-3 {
+      path {
+        stroke-opacity: 1;
+        stroke: #c1c1c1;
+      }
+
+      .circle_anim1,
+      .circle2_anim1 {
+        fill: #c1c1c1;
+      }
+
+      .circle-main {
+        fill: #c1c1c1;
+        fill-opacity: 1;
+      }
+    }
+  }
+
+  .webshop-title {
+    .dark-mask {
+      display: none;
+    }
+
+    rect {
+      fill-opacity: 1;
+    }
+
+    #paint1_linear_144_1208 {
+      stop {
+        stop-color: #EAEAEA;
+        stop-opacity: 1;
+      }
+    }
+  }
+
+  .webshop {
+    #path-1-inside-1_334_758 {
+      fill: #F7FAFD;
+    }
+
+    .path-1-inside-1_334_758 {
+      stroke-opacity: 1;
+      stroke: #F7FAFD;
+    }
+
+    #paint0_linear_334_758 {
+      stop {
+        &:first-child {
+          stop-opacity: 0.5;
+        }
+
+        &:last-child {
+          stop-opacity: 0.7;
+        }
+      }
+    }
+
+    .paint0_linear_334_758 {
+      fill-opacity: 1;
+    }
+
+    .white-c1 {
+      fill: #c1c1c1;
+
+      &.t-shirt {
+        stroke: #c1c1c1;
+      }
+    }
+  }
+}

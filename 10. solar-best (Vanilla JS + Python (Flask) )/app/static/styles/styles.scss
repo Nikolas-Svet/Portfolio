@@ -1,0 +1,75 @@
+@import "components/fonts";
+@import "components/variables";
+@import "components/switch";
+@import "components/textarea";
+@import "components/checkbox";
+@import "components/cookies";
+@import "components/select";
+@import "components/agb/main";
+@import "components/imprint/main";
+@import "components/imprint/notice";
+@import "components/input";
+@import "components/home/main";
+@import "components/home/callToAction";
+@import "components/footer";
+@import "components/popup";
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "OpenSans", Arial, sans-serif;
+  font-weight: 400;
+  min-height: 100vh;
+  background: var(--primary-background);
+}
+
+.container {
+  max-width: 1224px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+button, a {
+  transition: 0.2s;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.mobile {
+  display: none;
+
+  &-del {
+  }
+}
+
+//.invalid:after {
+//  border-color: red !important;
+//}
+
+
+
+@media (max-width: 561px) {
+  .mobile {
+    display: flex;
+
+    &-del {
+      display: none;
+    }
+  }
+
+  .container {
+    padding: 0 8px;
+  }
+}

@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "Play";
+    src: local("Play"), url("/static/fonts/PlayBold/Play-Bold.ttf") format("truetype"), url("/static/fonts/PlayBold/Play-Bold.woff") format("woff"), url("/static/fonts/PlayBold/Play-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Sergoe UI";
+    src: local("SergoeUI"), url("/static/fonts/SegoeUI/SegoeUI.ttf") format("truetype"), url("/static/fonts/SegoeUI/SegoeUI.woff") format("woff"), url("/static/fonts/SegoeUI/SegoeUI.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}

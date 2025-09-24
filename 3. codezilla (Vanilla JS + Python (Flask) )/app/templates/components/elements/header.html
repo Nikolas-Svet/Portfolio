@@ -1,0 +1,53 @@
+<section class="header">
+    <div class="header__lights-top">
+        <div></div>
+    </div>
+    <div class="header__lights-bottom">
+        <div class="header__lights-bottom__left"></div>
+        <div class="header__lights-bottom__right"></div>
+    </div>
+    <div class="header__align-content-left">
+        <div class="header__align-content-left__icons">
+            {% include 'components/icons/header/phone.html' %}
+            {% include 'components/icons/header/message.html' %}
+            {% include 'components/icons/header/location.html' %}
+        </div>
+    </div>
+    <div class="header__align-content-right">
+        <div class="header__align-content-right__icons">
+            {% include 'components/icons/header/inst.html' %}
+            {% include 'components/icons/header/in.html' %}
+            <div class="light_whatsapp">
+                {% include 'components/icons/header/whatsapp.html' %}
+            </div>
+        </div>
+    </div>
+    <div class="header__justify-content-top">
+        <a href="/" class="icon-left">
+            <div class="logo"></div>
+        </a>
+        <a href="/">&lt;Codezilla&gt;</a>
+        <div class="icon-right-top">
+            {% include 'components/icons/header/rectangle.html' %}
+        </div>
+    </div>
+    <div class="header__justify-content-bottom">
+        <div class="icon-left">
+            <input class="togglerTheme" type="checkbox">
+            <div class="icon-left__images">
+                <img class="cursor" src="{{ url_for('static', filename='images/header/dark.svg') }}" alt="">
+                <img class="cursor" src="{{ url_for('static', filename='images/header/light.svg') }}" alt="">
+            </div>
+        </div>
+        <div class="wrap">
+            <p>&lt;Ihr Projekt besprechen&gt;</p>
+        </div>
+        <div class="icon-left">
+            <input class="togglerTheme" type="checkbox">
+            <div class="icon-left__images">
+                <span>dark</span>
+                <span>light</span>
+            </div>
+        </div>
+    </div>
+</section>

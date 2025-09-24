@@ -1,0 +1,45 @@
+{
+  "name": "new-visumio-development-landing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 3 version"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/visumio/new-visumio-development-landing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/visumio/new-visumio-development-landing/issues"
+  },
+  "homepage": "https://gitlab.com/visumio/new-visumio-development-landing#readme",
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "autoprefixer": "^10.4.7",
+    "babel-loader": "^8.2.5",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^4.0.0",
+    "cssnano": "^5.1.12",
+    "mini-css-extract-plugin": "^2.6.1",
+    "postcss-loader": "^7.0.0",
+    "style-loader": "^3.3.1",
+    "stylus": "^0.58.1",
+    "stylus-loader": "^7.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "extract-text-webpack-plugin": "^3.0.2"
+  }
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/logo_favicon.svg/') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+    <!--    <link rel="stylesheet" href="{{ url_for('static', filename='styles/dist/styles.css') }}">-->
+    {% block title %}{% endblock %}
+</head>
+<body class="body" id="main">
+<a href="/" class="logo">
+    {% include 'components/icons/logo.html' %}
+    <h1>СИБАЛЯСКАТРЕВЕЛ</h1>
+</a>
+
+<section class="call">
+    <div class="call__header">
+        <span id="main_text"></span>
+        <div class="icon-close"></div>
+    </div>
+    <form class="call__content">
+        <div id="call__fullname" class="call__block">
+            <p>ФИО</p>
+            <input class="call__fullname" placeholder="Укажите свое ФИО" type="text">
+        </div>
+        <div id="call__fullname__review" class="call__block">
+            <p>ФИО</p>
+            <input class="call__fullname__review" placeholder="Укажите свое ФИО" type="text">
+        </div>
+        <div id="call__city" class="call__block">
+            <p>Город</p>
+            <input class="call__city" placeholder="Укажите свой город" type="text">
+        </div>
+        <div id="call__phone" class="call__block">
+            <p>Контактный телефон</p>
+            <input class="call__phone" placeholder="Укажите свой контактный телефон" type="tel">
+        </div>
+        <div id="call__email" class="call__block">
+            <p>Email</p>
+            <input class="call__email" placeholder="Укажите свой электронный адрес" type="email">
+        </div>
+        <div id="call__trips" class="call__block">
+            <p>Направление</p>
+            <span id="selects">
+                <span class="trip__main" id="trip_main">Выберите направление</span>
+                <img id="icon-arrow" src="{{ url_for('static', filename='images/arrow.svg/') }}" alt="">
+            </span>
+            <div id="call__selects" class="call__selects">
+                <div id="trip1" class="call__select">Новосибирск-Новокузнецк</div>
+                <div id="trip2" class="call__select">Новосибирск-Таштагол-Новосибирск</div>
+                <div id="trip3" class="call__select">Новокузнецк-Новосибирск</div>
+                <div id="trip4" class="call__select">Междуреченск-Новосибирск</div>
+                <div id="trip5" class="call__select">Новосибирск-Яровое</div>
+                <div id="trip6" class="call__select">Новосибирск-Краснозерское-Новосибирск</div>
+                <div id="trip7" class="call__info call__select">Заказная перевозка (точный маршрут в сообщении)
+                </div>
+            </div>
+        </div>
+        <div id="call__reviews" class="call__block">
+            <p>Как вам понравился сервис Сибаляскатревел?</p>
+            <span id="review-selects">
+                <span class="call__reviews" id="review_main">Выберите ваш балл для сервиса</span>
+                <img id="review-icon-arrow" src="{{ url_for('static', filename='images/arrow.svg/') }}" alt="">
+            </span>
+            <div id="reviews__selects" class="call__selects">
+                <div id="review1" class="call__review">
+                    Очень плохо
+                    <div class="call__stars">
+                        {% include 'components/icons/star.html' %}
+                    </div>
+                </div>
+                <div id="review2" class="call__review">
+                    Плохо
+                    <div class="call__stars">
+                        {% include 'components/icons/star.html' %}
+                        {% include 'components/icons/star.html' %}
+                    </div>
+                </div>
+                <div id="review3" class="call__review">
+                    Удовлетворительно
+                    <div class="call__stars">
+                        {% include 'components/icons/star.html' %}
+                        {% include 'components/icons/star.html' %}
+                        {% include 'components/icons/star.html' %}
+                    </div>
+                </div>
+                <div id="review4" class="call__review">
+                    Хорошо
+                    <div class="call__stars">
+                        {% include 'components/icons/star.html' %}
+                        {% include 'components/icons/star.html' %}
+                        {% include 'components/icons/star.html' %}
+                        {% include 'components/icons/star.html' %}
+                    </div>
+                </div>
+                <div id="review5" class="call__review">
+                    Отлично
+                    <div class="call__stars">
+                        {% include 'components/icons/star.html' %}
+                        {% include 'components/icons/star.html' %}
+                        {% include 'components/icons/star.html' %}
+                        {% include 'components/icons/star.html' %}
+                        {% include 'components/icons/star.html' %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="call__message" class="call__block">
+            <p>Сообщение</p>
+            <textarea class="call__message" placeholder="Сообщение..."></textarea>
+        </div>
+        <div id="call__message__review" class="call__block">
+            <p>Сообщение</p>
+            <textarea class="call__message__review" placeholder="Сообщение..."></textarea>
+        </div>
+    </form>
+    <div class="call__footer">
+        <button class="call__cancel">Отменить</button>
+        <button class="call__send">Отправить заявку</button>
+        <button class="call__send__review">Оставить отзыв</button>
+    </div>
+</section>
+<div class="call__wrap"></div>
+
+<div class="sidebar">
+    <div class="sidebar__content">
+        <div id="close" class="icon-close"></div>
+        <div class="sidebar__logo">
+            <img src="{{ url_for('static', filename='images/logo.svg/') }}" alt="logo">
+            <span>СИБАЛЯСКАТРЕВЕЛ</span>
+        </div>
+        <nav class="sidebar__left">
+            <button class="header__call2">Заказать перевозку</button>
+            <a href="/services/">Услуги</a>
+            <a href="/cars/">Автопарк</a>
+            <a href="/about-us/">О компании</a>
+        </nav>
+        <nav class="sidebar__right">
+            <a class="header-right__call4">Доставка сотрудников </a>
+            <a class="header-right__call5">Обслуживание корпоративов</a>
+            <a href="/children/">Перевозка детей</a>
+            <a class="header-right__call6">Междугородние перевозки</a>
+        </nav>
+        <div class="sidebar__social">
+            <div>
+                <a href="https://t.me/+79139052370" target="_blank"><img
+                        src="{{ url_for('static', filename='images/sidebar/telegram.svg/') }}" alt=""></a>
+                <a style="width: 26px;" href="mailto:info@sibalaskatravel.ru"><img style="width: 26px;"
+                                                                                   src="{{ url_for('static', filename='images/index/main/mail.svg/') }}"
+                                                                                   alt=""></a>
+                <a href="https://wa.me/79139052370" target="_blank"><img
+                        src="{{ url_for('static', filename='images/sidebar/whatsapp.svg/') }}" alt=""></a>
+                <img class="message__call__sidebar"
+                     src="{{ url_for('static', filename='images/sidebar/phone.svg/') }}"
+                     alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sidebar__wrap"></div>
+{% include 'components/elements/header.html' %}
+{% block body %}
+{% endblock %}
+{% include 'components/elements/footer.html' %}
+
+
+<script src="{{ url_for('static', filename='scripts/call.js/') }}"></script>
+<!--<script src="{{ url_for('static', filename='scripts/reviews.js/') }}"></script>-->
+<!--<script src="{{ url_for('static', filename='scripts/header.js/') }}"></script>-->
+<!--<script src="{{ url_for('static', filename='scripts/faq.js/') }}"></script>-->
+<!--<script src="{{ url_for('static', filename='scripts/send_form.js/') }}"></script>-->
+<!--<script src="{{ url_for('static', filename='scripts/base.js/') }}"></script>-->
+<script src="{{ url_for('static', filename='scripts/sidebar.js/') }}"></script>
+
+<script src="{{ url_for('static', filename='scripts/dist/reviews.js') }}"></script>
+<script src="{{ url_for('static', filename='scripts/dist/header.js') }}"></script>
+<script src="{{ url_for('static', filename='scripts/dist/faq.js') }}"></script>
+<script src="{{ url_for('static', filename='scripts/dist/send_form.js') }}"></script>
+<script src="{{ url_for('static', filename='scripts/dist/base.js/') }}"></script>
+<!--<script src="{{ url_for('static', filename='scripts/dist/sidebar.js/') }}"></script>-->
+{% block scripts %}{% endblock %}
+
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<div class="about-us">
+    <div class="about-us__content container__main">
+        <div class="about-us__block">
+            <h2 class="about-us__title">
+                О компании
+            </h2>
+            <span class="about-us__subtitle">
+                Наша Компания с 2016 года оказывает услуги пассажирских перевозок по всей России, и является одной  из самых надежных компаний и партнера Автовокзала Новосибирска в части регулярных междугородних маршрутов
+            </span>
+            <button class="about-us__call">
+                Заказать перевозку
+            </button>
+            <div class="about-us__registry">
+                <img src="{{ url_for('static', filename='images/about-us/registry.svg') }}" alt="">
+                <div>
+                    <span> «Лицензия на пассажирские перевозки
+                    Регистрационный номер: Л022-00112-54/01394385 от 20.09.2024»</span>
+                </div>
+                <img class="qr" src="{{ url_for('static', filename='images/qr.webp') }}" alt="">
+            </div>
+            {% include 'components/elements/message.html' %}
+        </div>
+    </div>
+</div>

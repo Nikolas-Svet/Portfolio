@@ -1,0 +1,68 @@
+{
+  "name": "monitoring",
+  "version": "1.0.0",
+  "main": "dist/main.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build-x64": "yarn copy-assets && electron-builder --win --x64",
+    "build-ia32": "yarn copy-assets && tsc && electron-builder --win --ia32",
+    "copy-assets": "cp -r src/assets dist/src && cp index.html dist/",
+    "dev": "vite",
+    "start": "electron .",
+    "build": "yarn copy-assets && tsc && electron-builder",
+    "server": "node --loader ts-node/esm src/server/server.ts"
+  },
+  "dependencies": {
+    "serialport": "^12.0.0",
+    "winston": "^3.17.0",
+    "winston-daily-rotate-file": "^5.0.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.5.13",
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8",
+    "vite": "^5.4.11",
+    "vite-plugin-static-copy": "^2.2.0"
+  },
+  "build": {
+    "appId": "com.yourapp.id",
+    "files": [
+      "dist/**/*",
+      "index.html",
+      "package.json",
+      "src/assets/**/*"
+    ],
+    "directories": {
+      "buildResources": "build"
+    },
+    "extraMetadata": {
+      "main": "dist/main.js"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico"
+    },
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true
+    },
+    "linux": {
+      "target": "AppImage",
+      "category": "Utility"
+    }
+  }
+}
