@@ -1,0 +1,85 @@
+@use "../variables";
+
+$anim_for_button: all 0.3s ease;
+
+.baseBorderBottom {
+  padding-bottom: variables.$primary-margin-sections;
+  border-bottom: 1px solid variables.$color-border;
+}
+
+.baseButton {
+  &__w240 {
+    padding: 0 20px;
+    max-width: 240px;
+    width: 100%;
+    border-radius: variables.$primary-radius;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    height: 52px;
+  }
+  &__w270 {
+    padding: 0 20px;
+    max-width: 270px;
+    width: 100%;
+    border-radius: variables.$primary-radius;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    height: 52px;
+  }
+  &__primaryGreen {
+    box-shadow: 0 4px 12px 0 #1E988B40;
+    border: none;
+    background-color: variables.$primary-green;
+    color: variables.$default-white;
+    text-transform: uppercase;
+    transition: $anim_for_button;
+
+    &:hover {
+      background-color: variables.$primary-green-hover;
+    }
+
+    &:active {
+      background-color: variables.$primary-green-active;
+    }
+
+    &:disabled {
+      background-color: variables.$primary-green-disabled;
+    }
+  }
+  &__primaryWhite {
+    border: 1px solid variables.$primary-green;
+    background-color: variables.$default-white;
+    color: variables.$primary-green;
+    text-transform: uppercase;
+    transition: $anim_for_button;
+
+    &:hover {
+      background-color: variables.$primary-green-hover-second;
+    }
+
+    &:active {
+      background-color: variables.$primary-green-active-second;
+    }
+
+    &:disabled {
+      background-color: variables.$primary-green-disabled;
+    }
+  }
+}
+
+@media (width < 1024px) {
+  .baseButton__w240 {
+    max-width: 200px;
+  }
+  .baseButton__w270 {
+    max-width: 220px;
+  }
+}

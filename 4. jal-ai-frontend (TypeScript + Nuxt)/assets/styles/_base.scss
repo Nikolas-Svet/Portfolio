@@ -1,0 +1,55 @@
+@use "variables";
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  overscroll-behavior: none;
+}
+
+.icon__ {
+  fill: grey !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100dvw;
+  min-height: 100dvh;
+  font-family: sans-serif;
+  background: variables.$primary-black;
+}
+
+.container {
+  &__main {
+    max-width: 1400px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+}
+
+button, a {
+  outline: none;
+  cursor: pointer;
+}
+
+input, select{
+  outline: none;
+}
+
+.desktop {
+  --primary-margin-sections: 80px;
+  --width-default-block: 73.5%;
+}
+
+.ipad {
+  --primary-margin-sections: 64px;
+  --width-default-block: 73.5%;
+}
+
+.mobile {
+  --primary-margin-sections: 40px;
+  --width-default-block: 100%;
+}

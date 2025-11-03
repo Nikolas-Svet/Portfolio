@@ -1,0 +1,158 @@
+@font-face {
+  font-family: "Inter-Regular";
+  src: url("../fonts/Inter/Inter-Regular/Inter-Regular.woff") format("woff"), url("../fonts/Inter/Inter-Regular/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter/Inter-Regular/Inter-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-Medium";
+  src: url("../fonts/Inter/Inter-Medium/Inter-Medium.woff") format("woff"), url("../fonts/Inter/Inter-Medium/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter/Inter-Medium/Inter-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Manrope-Medium";
+  src: url("../fonts/Manrope/Manrope-Medium/Manrope-Medium.woff") format("woff"), url("../fonts/Manrope/Manrope-Medium/Manrope-Medium.woff2") format("woff2"), url("../fonts/Manrope/Manrope-Medium/Manrope-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Manrope-Regular";
+  src: url("../fonts/Manrope/Manrope-Regular/Manrope-Regular.woff") format("woff"), url("../fonts/Manrope/Manrope-Regular/Manrope-Regular.woff2") format("woff2"), url("../fonts/Manrope/Manrope-Regular/Manrope-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("../fonts/Roboto/Roboto-Regular/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto/Roboto-Regular/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Regular/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  overscroll-behavior: none;
+}
+
+.icon__ {
+  fill: grey !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100dvw;
+  min-height: 100dvh;
+  font-family: sans-serif;
+  background: #151515;
+}
+
+.container__main {
+  max-width: 1400px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+button, a {
+  outline: none;
+  cursor: pointer;
+}
+
+input, select {
+  outline: none;
+}
+
+.desktop {
+  --primary-margin-sections: 80px;
+  --width-default-block: 73.5%;
+}
+
+.ipad {
+  --primary-margin-sections: 64px;
+  --width-default-block: 73.5%;
+}
+
+.mobile {
+  --primary-margin-sections: 40px;
+  --width-default-block: 100%;
+}
+
+.baseBorderBottom {
+  padding-bottom: var(--primary-margin-sections);
+  border-bottom: 1px solid rgba(248, 250, 252, 0.1019607843);
+}
+
+.baseButton__w240 {
+  padding: 0 20px;
+  max-width: 240px;
+  width: 100%;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  height: 52px;
+}
+.baseButton__w270 {
+  padding: 0 20px;
+  max-width: 270px;
+  width: 100%;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  height: 52px;
+}
+.baseButton__primaryGreen {
+  box-shadow: 0 4px 12px 0 rgba(30, 152, 139, 0.2509803922);
+  border: none;
+  background-color: #1E988B;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.baseButton__primaryGreen:hover {
+  background-color: #25AFA0;
+}
+.baseButton__primaryGreen:active {
+  background-color: #1E988B;
+}
+.baseButton__primaryGreen:disabled {
+  background-color: #AAADAD;
+}
+.baseButton__primaryWhite {
+  border: 1px solid #1E988B;
+  background-color: #FFFFFF;
+  color: #1E988B;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.baseButton__primaryWhite:hover {
+  background-color: #EFFFFD;
+}
+.baseButton__primaryWhite:active {
+  background-color: #FFFFFF;
+}
+.baseButton__primaryWhite:disabled {
+  background-color: #AAADAD;
+}
+
+@media (width < 1024px) {
+  .baseButton__w240 {
+    max-width: 200px;
+  }
+  .baseButton__w270 {
+    max-width: 220px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

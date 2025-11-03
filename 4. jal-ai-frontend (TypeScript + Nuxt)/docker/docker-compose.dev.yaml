@@ -1,0 +1,12 @@
+name: jal-ai-dev-front
+services:
+  frontend:
+    env_file:
+      - .env.dev
+    environment:
+      NODE_ENV: production
+    image: "${CI_REGISTRY_IMAGE}:${LATEST_TAG}"
+    restart: always
+    ports:
+      - "${remote_host}:18080:3000"
+    command: ["node", ".output/server/index.mjs"]

@@ -1,0 +1,34 @@
+@use "fonts";
+
+$Roboto-Regular: "Roboto-Regular";
+$Manrope-Regular: "Manrope-Regular";
+$Manrope-Medium: "Manrope-Medium";
+$Inter-Medium: "Inter-Medium";
+$Inter-Regular: "Inter-Regular";
+$primary-black: #151515;
+$primary-green: #1E988B;
+// button
+$primary-green-hover: #25AFA0;
+$primary-green-active: #1E988B;
+$primary-green-disabled: #AAADAD;
+// button second
+$primary-green-hover-second: #EFFFFD;
+$primary-green-active-second: #FFFFFF;
+
+// componentCounselingBlocks
+$primary-gray-number: #505050; // border
+$primary-gray-block: #262626;
+$color-border: #F8FAFC1A;
+
+$default-white: #FFFFFF;
+$default-black: #010101;
+$primary-light-gray: #F8FAFC;
+$primary-gray: #C8C8C8;
+$primary-radius: 8px;
+
+$primary-background-color-bot: #12786D;
+$primary-color-bot: #C8C8C880;
+
+// Значение по-умолчанию (на случай, если где-то используете без .desktop/.ipad)
+$primary-margin-sections: var(--primary-margin-sections) !default;
+$width-default-block: var(--width-default-block) !default;
