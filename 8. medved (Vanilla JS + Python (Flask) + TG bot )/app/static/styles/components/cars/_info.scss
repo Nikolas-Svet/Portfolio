@@ -1,0 +1,284 @@
+.info-cars {
+  width: 100%;
+  border-top: 12px solid $default-green;
+
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin-top: 80px;
+    font-size: 24px;
+    font-weight: 1000;
+    line-height: 1.3;
+  }
+
+  &__subtitle {
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    max-width: 486px;
+    text-align: center;
+    margin-bottom: 52px;
+  }
+
+  &__cars {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  &__car {
+    padding: 24px;
+    width: calc(50% - 12px);
+    background-color: $background-white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 100%;
+      margin-bottom: 26px;
+    }
+
+    &__content {
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+
+      div {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        p {
+          font-size: 16px;
+          font-weight: 400;
+          color: $default-black;
+        }
+
+        span {
+          text-align: right;
+          font-size: 16px;
+          font-weight: 600;
+          color: $default-black;
+        }
+      }
+    }
+
+    &__model {
+      font-size: 18px;
+      font-weight: 600;
+      color: $default-black;
+      margin-bottom: 21px;
+    }
+
+
+    .border {
+      margin-top: 5px;
+      border-top: 1px solid $default-black-opacity;
+      width: 100%;
+    }
+
+    &__subtitle {
+      padding-top: 21px;
+      font-size: 18px;
+      font-weight: 600;
+      color: $default-black;
+
+    }
+
+  }
+
+  &__image {
+    display: flex;
+    flex: 1;
+    width: 100%;
+  }
+}
+
+.info-cars__dots {
+  display: none;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px; // Можно настроить под свои отступы
+}
+
+.info-cars__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: $background-white; /* Цвет неактивной точки */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.info-cars__dot.active {
+  background-color: $default-green; /* Цвет активной точки */
+}
+
+
+@media (max-width: 900px) {
+  .info-cars {
+    border-top: 10px solid $default-green; // вместо 12px
+
+    &__title {
+      margin-top: 64px; // вместо 80px
+      font-size: 19px; // вместо 24px
+    }
+
+    &__subtitle {
+      margin-top: 6px; // вместо 8px
+      font-size: 14px; // вместо 16px
+      max-width: 390px; // вместо 486px
+      margin-bottom: 42px; // вместо 52px
+    }
+
+    &__cars {
+      gap: 18px;
+    }
+
+    &__car {
+      padding: 19px; // вместо 24px
+      width: calc(50% - 9px); // Вместо 50%, теперь в колонку
+
+      img {
+        margin-bottom: 21px; // вместо 26px
+      }
+
+      &__content {
+        gap: 6px; // вместо 8px
+
+        div {
+          p {
+            font-size: 13px; // вместо 16px
+          }
+
+          span {
+            font-size: 15px; // вместо 16px
+          }
+        }
+      }
+
+      &__model {
+        font-size: 15px; // вместо 18px
+        margin-bottom: 17px; // вместо 21px
+      }
+
+      .border {
+        margin-top: 4px; // вместо 5px
+      }
+
+      &__subtitle {
+        padding-top: 17px; // вместо 21px
+        font-size: 15px; // вместо 18px
+      }
+    }
+
+    &__image {
+      flex: none;
+      width: 100%;
+    }
+  }
+}
+
+
+@media (max-width: 800px) {
+  .info-cars__car__content div span {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .info-cars__dots {
+    display: flex;
+  }
+  .info-cars {
+    &__title {
+      margin-bottom: 24px;
+    }
+    &__cars {
+      width: 100%;
+      max-width: 644px;
+      display: flex;
+      overflow-x: hidden;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      gap: 24px;
+    }
+
+    &__car {
+
+      transition: 0.3s all ease;
+      width: 100%;
+      min-width: 310px;
+      background-color: $background-white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &__content {
+        div {
+          p, span {
+            width: fit-content;
+          }
+
+          span {
+            text-wrap: nowrap;
+          }
+        }
+      }
+    }
+  }
+
+  .no-wrap-block {
+    .info-cars__dots {
+      display: none !important;
+    }
+    .info-cars__cars {
+      width: 100% !important;
+      max-width: none !important;
+      display: flex !important;
+      flex-wrap: wrap !important;
+      gap: 24px !important;
+      justify-content: center !important;
+    }
+
+    .info-cars__car {
+      width: 100%;
+      max-width: 310px !important;
+      min-width: 0 !important;
+    }
+  }
+}
+
+@media (max-width: 686px) {
+  .info-cars {
+    &__cars {
+      max-width: 310px;
+    }
+    &__title {
+      margin-top: 60px;
+      margin-bottom: 20px !important;
+      max-width: 450px;
+      width: 100%;
+      text-align: left;
+      font-size: 20px;
+    }
+  }
+  .no-wrap-block {
+    .info-cars__car {
+      max-width: 450px !important;
+    }
+  }
+}

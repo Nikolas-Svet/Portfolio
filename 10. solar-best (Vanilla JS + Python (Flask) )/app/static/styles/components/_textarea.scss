@@ -1,0 +1,68 @@
+.textarea {
+  position: relative;
+  margin-bottom: 24px;
+  height: auto;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  textarea {
+    color: #232323;
+    border: 1px solid #D9D9D9;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 16px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    transition: 0.2s;
+    outline: none;
+    resize: vertical; /* Позволяет изменять размер по вертикали, но можно убрать */
+    min-height: 80px;
+    height: 105px;
+    max-height: 250px;
+    font-family: 'OpenSans', sans-serif;
+    &::placeholder {
+      font-family: 'OpenSans', sans-serif;
+    }
+
+    &:hover {
+      border-color: #39AB37;
+    }
+  }
+
+  textarea:focus {
+    border-color: #00B74A;
+    box-shadow: 0 0 5px 2px rgb(5, 107, 0 , 0.15);
+  }
+
+  textarea:focus + label,
+  textarea:not(:placeholder-shown) + label {
+    transform: translateY(-6px);
+    font-size: 12px;
+    opacity: 1;
+    color: var(--grey-dark);
+    background: white;
+    padding: 2px;
+  }
+
+  label {
+    opacity: 0.5;
+    position: absolute;
+    pointer-events: none;
+    left: 18px;
+    top: 0;
+    transition: 0.3s ease all;
+    padding: 16px 0;
+    color: #232323;
+  }
+}
+
+@media (max-width: 400px) {
+  .textarea {
+    textarea, label {
+      font-size: 14px;
+    }
+  }
+}

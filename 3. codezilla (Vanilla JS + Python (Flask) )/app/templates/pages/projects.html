@@ -1,0 +1,22 @@
+{% extends 'layouts/base.html' %}
+
+
+{% block title %}
+  <title>Projekte - Codezilla</title>
+{% endblock %}
+
+{% block body %}
+  <div class="main-container">
+    {% include 'components/parts/projects/main.html' %}
+    {% include 'components/parts/projects/projects.html' %}
+    {% include 'components/parts/projects/highlights.html' %}
+  </div>
+  <div style="max-width: 100vw; overflow: hidden">
+    {% include 'components/parts/projects/reviews.html' %}
+  </div>
+{% endblock %}
+
+{% block scripts %}
+  <script src="{{ url_for('static', filename='scripts/animation_words.js') }}"></script>
+  <script src="{{ url_for('static', filename='scripts/projects-animation.js') }}"></script>
+{% endblock %}

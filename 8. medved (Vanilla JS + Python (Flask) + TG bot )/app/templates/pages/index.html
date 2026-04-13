@@ -1,0 +1,23 @@
+{% extends 'layouts/base.html' %}
+
+
+{% block title %}
+<title>СИБАЛЯСКАТРЕВЕЛ</title>
+{% endblock %}
+
+{% block body %}
+{% include 'components/parts/index/main.html' %}
+{% include 'components/parts/index/info.html' %}
+{% include 'components/parts/index/map.html' %}
+{% include 'components/parts/index/banner.html' %}
+{% include 'components/parts/index/faq.html' %}
+{% include 'components/parts/index/reviews.html' %}
+{% endblock %}
+
+{% block scripts %}
+<!--<script src="{{ url_for('static', filename='scripts/list-trips.js') }}"></script>-->
+<!--<script src="{{ url_for('static', filename='scripts/message.js') }}"></script>-->
+<script src="{{ url_for('static', filename='scripts/dist/list-trips.js') }}"></script>
+<script src="{{ url_for('static', filename='scripts/dist/message.js') }}"></script>
+{% endblock %}
+

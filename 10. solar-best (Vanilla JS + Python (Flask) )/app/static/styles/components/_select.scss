@@ -1,0 +1,61 @@
+.select {
+  width: 100%;
+  position: relative;
+  margin-bottom: 24px;
+  height: 44px;
+
+  &:last-child {
+    margin-bottom: 0;
+    height: 105px;
+  }
+
+  select {
+    color: #232323;
+    border: 1px solid #D9D9D9;
+    height: 100%;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 9px 16px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+    appearance: none;
+    background-color: white;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23232323" d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+
+    &:hover {
+      border-color: #39AB37;
+    }
+
+    &:focus {
+      border-color: #00B74A;
+      box-shadow: 0 0 5px 2px rgba(5, 107, 0, 0.15);
+    }
+
+    /* Лейбл будет подниматься при наличии выбранного значения */
+    &.filled + label,
+    &:focus + label {
+      transform: translateY(-6px);
+      font-size: 12px;
+      opacity: 1;
+      color: var(--grey-dark);
+      background: white;
+      padding: 2px;
+    }
+  }
+
+  label {
+    opacity: 0.5;
+    position: absolute;
+    pointer-events: none;
+    left: 18px;
+    top: 0;
+    transition: 0.3s ease all;
+    padding: 14px 0;
+    color: #232323;
+  }
+}

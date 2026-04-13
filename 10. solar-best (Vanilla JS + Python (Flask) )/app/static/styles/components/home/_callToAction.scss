@@ -1,0 +1,366 @@
+p {
+  font-weight: 700;
+}
+
+input.inactive {
+
+  &:after {
+    border: 1px solid red !important;
+  }
+
+  &:before {
+    display: none;
+  }
+}
+
+input.default {
+
+  &:after {
+    border: 1px solid #D9D9D9 !important;
+    background-color: white !important;
+  }
+
+  &:before {
+    display: none;
+  }
+}
+
+input.active {
+
+  &:after {
+    border: none !important;
+    background-color: #0275ff !important;
+  }
+
+  &:before {
+    display: block;
+    content: '';
+    transform: rotate(135deg);
+    position: absolute;
+    right: 11%;
+    top: 25%;
+    z-index: 1;
+    width: 15px;
+    height: 7px;
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+  }
+}
+
+.call-to-action {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 80px !important;
+  padding-bottom: 160px !important;
+
+  &__block-text {
+    padding: 113px 8px 147px 8px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    line-height: 1.5;
+    font-size: 18px;
+
+    p {
+      font-size: 20px;
+      margin-bottom: 28px;
+      line-height: 1.4;
+    }
+  }
+
+  &__block-button {
+    display: flex;
+    flex-direction: column;
+    margin: 120px 0;
+    padding: 41px 48px 49px 48px;
+    background-color: #FBCF28;
+
+    p {
+      font-size: 20px;
+      line-height: 1.3;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 43px;
+    }
+
+    a {
+      box-shadow: 0px 4px 20px rgba(176, 140, 5, 0.2);
+      border: none;
+      text-align: center;
+      width: 100%;
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 16px 0;
+      color: #232323;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  }
+
+  .main__offer-item {
+    display: none;
+  }
+
+  &__form {
+    width: 100%;
+    max-width: 741px;
+
+    &-header {
+      color: #ffffff;
+      padding: 12px 0;
+      font-size: 24px;
+      text-align: center;
+      align-content: center;
+      line-height: 1.2;
+      font-weight: 700;
+      width: 100%;
+      text-transform: uppercase;
+      background-color: #39AB37;
+      border-radius: 20px 20px 0 0;
+    }
+
+    &-body {
+      padding: 34px 24px 46px 24px;
+      background-color: #ffffff;
+      border-radius: 0 0 20px 20px;
+    }
+
+    &-section {
+      width: 100%;
+    }
+
+    &-boxButton {
+      width: 100%;
+
+      button {
+        font-weight: 550;
+        font-size: 16px;
+        max-width: 326px;
+        height: 52px;
+        width: 100%;
+        background-color: #FBCF28;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        text-align: center;
+        margin-top: 24px;
+      }
+
+      div {
+        margin-top: 10px;
+        justify-content: left;
+
+        &:last-child {
+          width: 100%;
+          margin-top: 24px;
+          display: flex;
+          align-items: center;
+
+          //input {
+          //  cursor: pointer;
+          //  margin-right: 16px;
+          //  height: 20px;
+          //  min-width: 20px;
+          //  border: 1px solid #D9D9D9;
+          //  position: relative;
+          //
+          //  &:after {
+          //    position: absolute;
+          //    content: "";
+          //    height: 21px;
+          //    width: 21px;
+          //    left: 0;
+          //    top: 0;
+          //    border-radius: 2px;
+          //    background-color: white;
+          //    border: 1px solid #D9D9D9;
+          //  }
+          //}
+        }
+      }
+
+      p {
+        font-weight: 400;
+        line-height: 1.28;
+        max-width: 533px;
+        font-size: 14px;
+        color: #232323;
+
+        a {
+          cursor: pointer;
+          display: contents;
+          color: #4B31EA;
+        }
+      }
+    }
+  }
+
+  &__advantages {
+    width: 100%;
+    max-width: 379px;
+    margin-left: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &-box {
+      border-radius: 20px;
+      width: 100%;
+      padding: 36px 27px;
+      margin-bottom: 36px;
+      background-color: #ffffff;
+
+      &:nth-child(2) {
+        background-color: #FBCF28;
+      }
+
+      &:nth-child(4) {
+        padding: 0;
+        background-color: transparent;
+
+        img {
+          width: 100%;
+          border-radius: 20px;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+        padding: 0;
+        background-color: transparent;
+
+        img {
+          width: 100%;
+          border-radius: 20px;
+        }
+      }
+
+      &-title {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 23px;
+        line-height: 1.2;
+      }
+
+      &-description {
+        //width: 90%;
+        line-height: 1.5;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+
+@media(max-width: 1000px) {
+  .call-to-action {
+    padding-top: 60px !important;
+    padding-bottom: 120px !important;
+
+    &__form {
+      &-header {
+        font-size: 20px;
+      }
+
+      &-boxButton {
+        p {
+          line-height: 1.2;
+        }
+      }
+    }
+
+    &__advantages {
+      max-width: 290px;
+      margin-left: 20px;
+
+      &-box {
+        margin-bottom: 36px;
+        padding: 32px 21px;
+      }
+
+      img {
+        height: 190px;
+      }
+    }
+  }
+}
+
+@media(max-width: 767px) {
+  .call-to-action {
+    flex-direction: column;
+    padding-top: 40px !important;
+    padding-bottom: 80px !important;
+
+    &__form {
+      max-width: none;
+
+      &-boxButton {
+        div:last-child {
+          input {
+            margin-right: 8px !important;
+          }
+        }
+      }
+    }
+
+    &__advantages {
+      margin-top: 24px;
+      max-width: none;
+      margin-left: 0;
+
+      img {
+        height: auto;
+      }
+
+      &-box {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
+
+@media (max-width: 561px) {
+  .call-to-action {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: -67px !important;
+    z-index: 10;
+    position: relative;
+
+    .main__offer-item {
+      display: flex !important;
+      border-radius: 0;
+
+      &-content {
+        padding: 26px 24px 0;
+      }
+    }
+
+    &__form {
+      &-header {
+        padding: 0;
+        border-radius: 0;
+        background-color: #ffffff;
+        color: #39AB37;
+        text-transform: none;
+      }
+    }
+
+    &__advantages {
+      &-box {
+        padding: 44px 27px;
+
+        &:nth-child(2) {
+          background-color: #39AB37;
+          color: #ffffff;
+          box-shadow: 0px 4px 20px 0px rgba(17, 51, 17, 0.3);
+        }
+
+        &:nth-child(3) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

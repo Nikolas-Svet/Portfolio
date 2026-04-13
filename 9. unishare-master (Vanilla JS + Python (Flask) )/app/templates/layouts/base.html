@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/logo.svg') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+<!--  <link rel="stylesheet" href="{{ url_for('static', filename='styles/dist/styles.css') }}">-->
+  {% block title %}{% endblock %}
+</head>
+<body id="body">
+
+<div class="cookies" id="cookies">
+  <p style="line-height: 1.4" class="cookies__text">
+    Wir setzen Cookies ein, um die Nutzung der Webseite für den Besucher einfacher und bequemer zu gestalten bzw. bestimmte Funktionen überhaupt erst zu ermöglichen. Durch die Nutzung dieser Webseite erklären Sie sich mit der Verwendung von Cookies einverstanden. Weitere Infos entnehmen Sie unserer <a href="/data-protection/#cookiesYak" target="_blank">Datenschutzerklärung</a>.
+  </p>
+  <button class="cookies__btn" id="cookiesBtn">ok</button>
+</div>
+
+{% include 'components/elements/header.html' %}
+{% block body %}
+{% endblock %}
+{% include 'components/elements/footer.html' %}
+
+
+<script src="{{ url_for('static', filename='scripts/header.js') }}"></script>
+<script src="{{ url_for('static', filename='scripts/cookies.js') }}"></script>
+{% block scripts %}{% endblock %}
+
+</body>
+</html>

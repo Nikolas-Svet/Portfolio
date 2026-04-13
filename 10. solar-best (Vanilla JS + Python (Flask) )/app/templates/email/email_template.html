@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email</title>
+    <style>
+        body {
+            font-family: 'OpenSans', sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 700px;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 8px 12px;
+            vertical-align: top;
+            word-break: break-word;
+            line-height: 1.4;
+            color: black;
+        }
+
+        th {
+            width: 150px;
+            background-color: #f2f2f2;
+            text-align: start;
+        }
+
+        h1 {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+<h1>Neuer Antrag auf Beratung</h1>
+<table>
+    <tr>
+        <th>Vorname:</th>
+        <td>{{ surname | e }}</td>
+    </tr>
+    <tr>
+        <th>Name:</th>
+        <td>{{ name | e }}</td>
+    </tr>
+    <tr>
+        <th>Anrede:</th>
+        <td>{{ sex | e }}</td>
+    </tr>
+    <tr>
+        <th>Mail:</th>
+        <td>{{ email | e }}</td>
+    </tr>
+    <tr>
+        <th>Telefonnummer:</th>
+        <td>{{ phone | e }}</td>
+    </tr>
+    <tr>
+        <th>Strasse und Hausnummer:</th>
+        <td>{{ street_and_house | e }}</td>
+    </tr>
+    <tr>
+        <th>PLZ:</th>
+        <td>{{ postcode | e }}</td>
+    </tr>
+    <tr>
+        <th>Ort:</th>
+        <td>{{ city | e }}</td>
+    </tr>
+    <tr>
+        <th>Immobilienart:</th>
+        <td>{{ type_real_estate | e }}</td>
+    </tr>
+    <tr>
+        <th>Gebäudetyp:</th>
+        <td>{{ building_type | e }}</td>
+    </tr>
+    <tr>
+        <th>Wie heizen Sie:</th>
+        <td>{{ how_do_you_heat | e }}</td>
+    </tr>
+    <tr>
+        <th>Jahresverbrauch an Strom (kWh):</th>
+        <td>{{ consumption | e }}</td>
+    </tr>
+    <tr>
+        <th>Dachform:</th>
+        <td>{{ roof_shape | e }}</td>
+    </tr>
+    <tr>
+        <th>Baubeginn:</th>
+        <td>{{ start_construction | e }}</td>
+    </tr>
+    <tr>
+        <th>Ihre Nachricht:</th>
+        <td>{{ description | e }}</td>
+    </tr>
+</table>
+</body>
+</html>

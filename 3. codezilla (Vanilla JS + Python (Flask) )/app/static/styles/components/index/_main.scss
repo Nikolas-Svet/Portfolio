@@ -1,0 +1,406 @@
+
+.main {
+  margin-top: calc(50vh - 136px);
+
+  * {
+    overflow-x: hidden;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    min-width: 729px;
+    width: 100%;
+    text-align: center;
+
+    span {
+      color: #078EFA;
+    }
+
+    p {
+      line-height: 1.31;
+      font-size: 64px;
+      font-weight: 600;
+
+      &:last-child {
+        margin-top: 45px;
+        max-width: 506px;
+        font-size: 20px;
+        line-height: 1.5;
+        opacity: 0.8;
+        text-transform: none;
+        font-weight: 200;
+      }
+    }
+  }
+}
+
+
+.scroller {
+  text-align: left;
+  height: 4em;
+  line-height: 6.8em;
+  position: relative;
+  overflow: hidden;
+  width: 79%;
+}
+
+.scroller > span {
+  position: absolute;
+  text-transform: uppercase;
+  top: 0;
+  animation: slide 13s infinite;
+  font-size: 64px;
+  font-weight: 600;
+}
+
+@keyframes slide {
+  0%, 17% {
+    top: 0;
+  }
+  20%, 30%, 37% {
+    top: -3em;
+  }
+  40%, 50%, 57% {
+    top: -1em;
+  }
+  60%, 70%, 77% {
+    top: -4em;
+  }
+  80%, 90%, 97% {
+    top: -2em;
+  }
+}
+
+
+.anim {
+  max-width: 727px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  animation: slide2 13s infinite;
+
+  p {
+    margin-right: 10px;
+  }
+}
+
+@keyframes slide2 {
+  0%, 17% {
+    transform: translateX(0);
+  }
+  20%, 30%, 37% {
+    transform: translateX(128px);
+  }
+  40%, 50%, 57%, 60%, 70%, 77% {
+    transform: translateX(96px);
+  }
+  80%, 90%, 97% {
+    transform: translateX(265px);
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .anim {
+    max-width: 635px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    animation: slide2 13s infinite;
+
+    p {
+      margin-right: 10px;
+    }
+  }
+
+  .scroller {
+    text-align: left;
+    height: 3.8em;
+    line-height: 6.8;
+    position: relative;
+    overflow: hidden;
+    width: 79%;
+  }
+
+  .scroller > span {
+    position: absolute;
+    text-transform: uppercase;
+    top: 0;
+    line-height: 1.1;
+    animation: slide 13s infinite;
+    font-size: 52px;
+    font-weight: 600;
+  }
+  .main {
+
+    &__title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      min-width: 635px;
+      width: 100%;
+      text-align: center;
+
+      span {
+        color: #078EFA;
+      }
+
+      p {
+        line-height: 1.31;
+        font-size: 52px;
+        font-weight: 600;
+
+        &:last-child {
+          margin-top: 45px;
+          max-width: 506px;
+          font-size: 18px;
+          line-height: 1.5;
+          opacity: 0.8;
+          text-transform: none;
+          font-weight: 200;
+        }
+      }
+    }
+  }
+  @keyframes slide {
+    0%, 17% {
+      top: 2px;
+    }
+    20%, 30%, 37% {
+      top: -171px;
+    }
+    40%, 50%, 57% {
+      top: -56px;
+    }
+    60%, 70%, 77% {
+      top: -226px;
+    }
+    80%, 90%, 97% {
+      top: -113px;
+    }
+  }
+
+  @keyframes slide2 {
+    0%, 17% {
+      transform: translateX(23px);
+    }
+    20%, 30%, 37% {
+      transform: translateX(120px);
+    }
+    40%, 50%, 57%, 60%, 70%, 77% {
+      transform: translateX(96px);
+    }
+    80%, 90%, 97% {
+      transform: translateX(235px);
+    }
+  }
+}
+
+
+@media (max-width: 645px) {
+
+  .anim {
+    margin-top: -5px;
+    max-width: 455px;
+  }
+
+  .scroller > span {
+    line-height: 1.2;
+    font-size: 40px;
+  }
+  .main {
+
+    &__title {
+      min-width: 435px;
+
+      p {
+        line-height: 1.31;
+        font-size: 40px;
+
+        &:last-child {
+          margin-top: 25px;
+          max-width: 390px;
+          font-size: 15px;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+  @keyframes slide {
+    0%, 17% {
+      top: 6px;
+    }
+    20%, 30%, 37% {
+      top: -138px;
+    }
+    40%, 50%, 57% {
+      top: -42px;
+    }
+    60%, 70%, 77% {
+      top: -186px;
+    }
+    80%, 90%, 97% {
+      top: -90px;
+    }
+  }
+
+  @keyframes slide2 {
+    0%, 17% {
+      transform: translateX(0px);
+    }
+    20%, 30%, 37% {
+      transform: translateX(75px);
+    }
+    40%, 50%, 57%, 60%, 70%, 77% {
+      transform: translateX(58px);
+    }
+    80%, 90%, 97% {
+      transform: translateX(165px);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+
+  .anim {
+    margin-top: -5px;
+    max-width: 366px;
+
+    p {
+      margin-right: 3px;
+    }
+  }
+
+  .scroller > span {
+    line-height: 1.5;
+    font-size: 32px;
+  }
+  .main {
+
+    &__title {
+      min-width: 300px;
+
+      p {
+        line-height: 1.31;
+        font-size: 32px;
+
+        &:last-child {
+          margin-top: 25px;
+          max-width: 366px;
+          font-size: 14px;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+  @keyframes slide {
+    0%, 17% {
+      top: 7px;
+    }
+    20%, 30%, 37% {
+      top: -138px;
+    }
+    40%, 50%, 57% {
+      top: -42px;
+    }
+    60%, 70%, 77% {
+      top: -186px;
+    }
+    80%, 90%, 97% {
+      top: -90px;
+    }
+  }
+
+  @keyframes slide2 {
+    0%, 17% {
+      transform: translateX(0px);
+    }
+    20%, 30%, 37% {
+      transform: translateX(60px);
+    }
+    40%, 50%, 57%, 60%, 70%, 77% {
+      transform: translateX(48px);
+    }
+    80%, 90%, 97% {
+      transform: translateX(132px);
+    }
+  }
+}
+
+@media (max-width: 401px) {
+
+  .anim {
+    margin-top: 0;
+    max-width: 302px;
+
+    p {
+      margin-right: 3px;
+    }
+  }
+
+  .scroller > span {
+    line-height: 1.84;
+    font-size: 26px;
+  }
+
+  .scroller {
+    height: 1.8em;
+  }
+  .main {
+
+    &__title {
+      min-width: 280px;
+
+      p {
+        line-height: 1.31;
+        font-size: 26px;
+
+        &:last-child {
+          margin-top: 25px;
+          max-width: 302px;
+          font-size: 13px;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+  @keyframes slide {
+    0%, 17% {
+      top: -9px;
+    }
+    20%, 30%, 37% {
+      top: -152px;
+    }
+    40%, 50%, 57% {
+      top: -57px;
+    }
+    60%, 70%, 77% {
+      top: -200px;
+    }
+    80%, 90%, 97% {
+      top: -105px;
+    }
+  }
+
+  @keyframes slide2 {
+    0%, 17% {
+      transform: translateX(5px);
+    }
+    20%, 30%, 37% {
+      transform: translateX(53px);
+    }
+    40%, 50%, 57%, 60%, 70%, 77% {
+      transform: translateX(42px);
+    }
+    80%, 90%, 97% {
+      transform: translateX(111px);
+    }
+  }
+
+}

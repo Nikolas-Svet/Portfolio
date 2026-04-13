@@ -1,0 +1,19 @@
+{% extends 'layouts/base.html' %}
+
+
+{% block title %}
+<title>Автопарк</title>
+{% endblock %}
+
+{% block body %}
+{% include 'components/parts/cars/main.html' %}
+{% include 'components/parts/cars/info.html' %}
+{% include 'components/elements/question.html' %}
+{% include 'components/parts/index/faq.html' %}
+{% include 'components/parts/index/reviews.html' %}
+{% endblock %}
+
+{% block scripts %}
+<!--<script src="{{ url_for('static', filename='scripts/message.js') }}"></script>-->
+<script src="{{ url_for('static', filename='scripts/dist/message.js') }}"></script>
+{% endblock %}

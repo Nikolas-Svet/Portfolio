@@ -1,0 +1,54 @@
+@use "variables";
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  overscroll-behavior: none;
+}
+
+:root {
+  --primary-margin-sections: 80px;
+  --width-default-block: 73.5%;
+}
+
+@media (width < 1200px) {
+  :root {
+    --primary-margin-sections: 64px;
+  }
+}
+
+@media (width < 768px) {
+  :root {
+    --primary-margin-sections: 40px;
+    --width-default-block: 100%;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100dvw;
+  min-height: 100dvh;
+  font-family: sans-serif;
+  background: variables.$primary-black;
+}
+
+.container {
+  &__main {
+    max-width: 1400px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+}
+
+button, a {
+  outline: none;
+  cursor: pointer;
+}
+
+input, select{
+  outline: none;
+}

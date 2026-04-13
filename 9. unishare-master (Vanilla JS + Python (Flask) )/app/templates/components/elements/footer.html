@@ -1,0 +1,29 @@
+<div class="footer__info">
+    <div class="footer__info-content">
+        <span>UniShare – ein neuer Ansatz für urbane Mobilität. </span>
+        <p>
+            UniShare verändert, wie wir uns in Städten bewegen, reduziert Staus und Umweltbelastung. Mit innovativen Lösungen schaffen wir lebenswerte, effiziente Städte.
+        </p>
+    </div>
+</div>
+<footer class="footer">
+    <div class="footer__content">
+        <a href="/" class="footer__logo">
+            <img src="{{ url_for('static', filename='images/logo2.svg') }}" alt="">
+            <span>Share Unity</span>
+        </a>
+        <a href="http://app-demo.delo-gmbh.de/" class="footer__button">
+            Zur Demo gehen
+            {% include 'components/icons/arrow.html' %}
+        </a>
+        <div class="footer__up">
+            <a href="#body" class="up">
+                <img src="{{ url_for('static', filename='images/arrow.svg') }}" alt="">
+            </a>
+        </div>
+    </div>
+    <nav class="footer__nav">
+        <a href="/data-protection/">Datenschutzerklärung</a>
+        <a href="/imprint/">Impressum</a>
+    </nav>
+</footer>

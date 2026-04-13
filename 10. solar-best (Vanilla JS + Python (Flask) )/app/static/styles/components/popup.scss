@@ -1,0 +1,163 @@
+.mask {
+  cursor: pointer;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #00000066;
+  z-index: 12;
+  backdrop-filter: blur(5px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__content {
+    width: 100%;
+    max-width: 794px;
+    padding: 42px 32px 42px 64px;
+    background-color: #39AB37;
+    border-radius: 24px;
+    cursor: default;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 13;
+
+    &__text {
+      max-width: 500px;
+      line-height: 1.7;
+      display: flex;
+      flex-direction: column;
+      color: #ffffff;
+
+      p {
+        font-size: 36px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.check {
+  display: flex;
+  border: 4px solid #ffffff;
+  position: relative;
+  height: 164px;
+  width: 164px;
+  border-radius: 50%;
+
+  &:after {
+    content: "";
+    background-color: #ffffff;
+    width: 34px;
+    height: 4px;
+    position: absolute;
+    top: 55.9%;
+    right: 52%;
+    border-radius: 5px 0 0 5px;
+    transform: rotate(45deg);
+  }
+
+  &:before {
+    content: "";
+    background-color: #ffffff;
+    position: absolute;
+    width: 58px;
+    height: 4px;
+    top: 49%;
+    right: 24%;
+    border-radius: 0 5px 5px 0;
+    transform: rotate(-45deg);
+  }
+}
+
+.cancel {
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  background-color: transparent;
+  position: absolute;
+  border-radius: 0;
+  border: none;
+  top: 25px;
+  right: 20px;
+  opacity: 0.4;
+
+  &:before {
+    content: '';
+    position: absolute;
+    height: 22px;
+    width: 2px;
+    background-color: #ffffff;
+    top: 0;
+    left: 0;
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    height: 22px;
+    width: 2px;
+    background-color: #ffffff;
+    top: 0;
+    left: 0;
+    transform: rotate(-45deg);
+  }
+}
+
+
+@media (max-width: 767px) {
+  .mask {
+    &__content {
+      padding: 50px 20px 50px 20px;
+    }
+  }
+}
+
+@media (max-width: 561px) {
+  .mask {
+    &__content {
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      padding: 100px 20px;
+      border-radius: 0;
+
+      &__text {
+        max-width: 400px;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+
+        p {
+          margin-bottom: 85px;
+        }
+
+        div {
+          margin-bottom: 57px;
+          margin-right: 0 !important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .mask {
+    &__content {
+      &__text {
+        p {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}

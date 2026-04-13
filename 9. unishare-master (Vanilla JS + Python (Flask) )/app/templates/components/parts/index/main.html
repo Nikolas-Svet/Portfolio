@@ -1,0 +1,20 @@
+<section id="main" class="main">
+    <div class="main__content container__main">
+        <div class="main__block">
+            <h1 class="main__title">
+                UniShare: <br>
+                Die universelle Sharing-Plattform
+            </h1>
+            <span class="main__subtitle">
+                Eine innovative App, die Carsharing, E-Scooter und andere Mikromobilitätsdienste auf einer Plattform vereint.
+            </span>
+            <a href="http://app-demo.delo-gmbh.de/" class="main__buttons">
+                <button>Zur Demo gehen</button>
+                <button>
+                    {% include 'components/icons/arrow.html' %}
+                </button>
+            </a>
+        </div>
+        <img class="main__image" src="{{ url_for('static', filename='images/index/phone.webp') }}" alt="">
+    </div>
+</section>

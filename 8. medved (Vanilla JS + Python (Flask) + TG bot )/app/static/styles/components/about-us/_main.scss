@@ -1,0 +1,169 @@
+.about-us {
+  position: relative;
+  z-index: 11;
+  height: 600px;
+  width: 100%;
+  background: url("/static/images/about-us/background.webp") no-repeat center;
+  background-size: cover;
+
+  .qr {
+    width: 90px !important;
+    max-width: none !important;
+    margin-right: 0 !important;
+    clip-path: inset(1px) !important;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+
+  &__block {
+    margin-top: 190px;
+    max-width: 429px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__title {
+    max-width: 407px;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    color: $default-white;
+  }
+
+  &__subtitle {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: $default-white;
+    margin-bottom: 48px;
+  }
+
+  &__call {
+    max-width: 183px;
+    height: 45px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: $default-white;
+    border-radius: 2px;
+    background-color: $default-green;
+    outline: none;
+    border: none;
+  }
+
+  &__registry {
+    width: 460px;
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+
+    img {
+      max-width: 40px;
+      margin-right: 16px;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+
+      span, p {
+        font-weight: 400;
+        line-height: 1.45;
+        color: $default-white;
+      }
+
+      span {
+        max-width: 310px;
+      }
+
+      p {
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .about-us {
+    height: 500px;
+
+    &__block {
+      margin-top: 102px; // вместо 190px
+      max-width: 343px; // вместо 429px
+      z-index: 0;
+    }
+
+    &__title {
+      max-width: 325px; // вместо 407px
+      font-size: 38px; // вместо 48px
+      margin-bottom: 8px; // вместо 10px
+    }
+
+    &__subtitle {
+      font-size: 15px; // вместо 15px
+      margin-bottom: 38px; // вместо 48px
+    }
+
+    &__call {
+      position: relative;
+      z-index: 1;
+      max-width: 146px; // вместо 183px
+      font-size: 12px; // вместо 14px
+    }
+
+    &__registry {
+      width: 368px; // вместо 460px
+      margin-top: 38px; // вместо 48px
+
+      img {
+        max-width: 32px; // вместо 40px
+        margin-right: 13px; // вместо 16px
+      }
+
+      div {
+        span {
+          max-width: 248px; // вместо 310px
+        }
+
+        span, p {
+          font-size: 13px; // уменьшено с 14px
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .about-us {
+    height: 500px;
+
+    &__registry {
+      div {
+        span, p {
+          max-width: 190px;
+          font-size: 12px; // уменьшено с 14px
+        }
+      }
+    }
+
+    &__title {
+      font-size: 30px; // вместо 48px
+    }
+
+    &__subtitle {
+      font-size: 16px; // вместо 15px
+    }
+
+    &__block {
+      margin-top: 100px; // вместо 190px
+    }
+  }
+}

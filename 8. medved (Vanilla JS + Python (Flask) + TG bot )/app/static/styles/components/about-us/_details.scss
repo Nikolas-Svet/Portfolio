@@ -1,0 +1,141 @@
+.details {
+  margin-top: 80px;
+
+  .a-color {
+    color: $default-black;
+    cursor: pointer;
+  }
+
+  &__content {
+    padding: 30px 24px;
+    background-color: $background-map;
+    margin-bottom: 48px;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: $default-black;
+  }
+
+  &__blocks {
+    margin-top: 48px;
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+    justify-content: space-between;
+    &:nth-child(4) {
+      margin-top: 27px;
+    }
+  }
+
+  &__block {
+    width: calc(50% - 16px);
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.3;
+      color: $default-black;
+      margin-bottom: 16px;
+    }
+
+    a {
+      color: $default-a;
+      text-decoration: none;
+      display: contents;
+    }
+
+    span {
+      font-size: 16px;
+      font-weight: 100;
+      line-height: 1.3;
+      color: $default-black;
+
+      &:last-child {
+        margin-top: 12px;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .details {
+    margin-top: 64px;
+
+    &__content {
+      padding: 24px 20px;
+      margin-bottom: 40px;
+    }
+
+    &__title {
+      font-size: 19px;
+    }
+
+    &__blocks {
+      margin-top: 40px;
+      gap: 24px;
+      &:nth-child(4) {
+        margin-top: 22px;
+      }
+    }
+
+    &__block {
+      width: calc(50% - 12px);
+    }
+
+    &__text {
+      p {
+        font-size: 15px;
+        margin-bottom: 14px;
+      }
+
+      a {
+        font-size: 15px;
+      }
+
+      span {
+        font-size: 15px;
+
+        &:last-child {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .details {
+    &__blocks {
+      flex-direction: column;
+    }
+
+    &__block {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .details {
+    &__title {
+      padding: 0 20px;
+    }
+    &__blocks {
+      padding: 0 20px;
+      width: 100vw;
+    }
+  }
+}

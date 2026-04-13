@@ -1,0 +1,10 @@
+.light {
+  background: url("/static/images/background.webp") no-repeat center;
+  background-size: cover;
+  .logo {
+    min-width: 28px;
+    min-height: 28px;
+    background: url("/static/images/header/logo.svg") no-repeat center center;
+    background-size: cover;
+  }
+}

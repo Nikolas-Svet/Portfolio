@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мониторинг поляризаций</title>
+    <link rel="stylesheet" href="./src/assets/styles/styles.css">
+    <script type="module" src="./src/main.js"></script>
+</head>
+<body>
+<div id="app" class="dashboard-app">
+    <main class="dashboard">
+        <header class="dashboard-header">
+            <div class="dashboard-header__copy">
+                <p class="dashboard-header__eyebrow">Контроль радиомодуля</p>
+                <h1 class="dashboard-header__title">Мониторинг</h1>
+            </div>
+            <div class="battery-indicator" aria-label="Уровень батареи">
+                <div class="battery-indicator__track">
+                    <div class="battery-indicator__fill" id="battery-fill"></div>
+                    <span class="battery-indicator__value" id="value_battery">--</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="dashboard__grid" id="block-1" data-block-id="1">
+            <section class="panel panel--controls" id="block-3" data-block-id="3">
+                <div class="panel__header">
+                    <div>
+                        <p class="panel__eyebrow">Частоты и режимы</p>
+                        <h2 class="panel__title">Управление</h2>
+                    </div>
+                    <div class="panel__actions">
+                        <button id="modes-button" class="button button--ghost" type="button">Режимы</button>
+                        <button id="cancel" class="button button--ghost is-hidden" type="button">Отменить</button>
+                        <button id="back" class="button button--ghost is-hidden" type="button">Назад</button>
+                        <button id="next" class="button button--ghost is-hidden" type="button">Далее</button>
+                        <button id="create" class="button button--ghost is-hidden" type="button">Создать</button>
+                        <button id="manual-button" class="button button--secondary" type="button">Ручное</button>
+                        <button id="apply-button" class="button button--primary" type="button">Применить</button>
+                    </div>
+                </div>
+
+                <div class="mode-switcher">
+                    <section class="mode-switcher__section" data-frequency-group="vertical">
+                        <p class="frequency-group__title">Вертикальная поляризация</p>
+                        <div class="frequency-grid">
+                            <label class="frequency-toggle">
+                                <input id="0" checked="checked" type="checkbox" class="frequency-toggle__input">
+                                <span class="frequency-toggle__mark" aria-hidden="true"></span>
+                                <span class="frequency-toggle__label"></span>
+                            </label>
+                            <label class="frequency-toggle">
+                                <input id="1" checked="checked" type="checkbox" class="frequency-toggle__input">
+                                <span class="frequency-toggle__mark" aria-hidden="true"></span>
+                                <span class="frequency-toggle__label"></span>
+                            </label>
+                            <label class="frequency-toggle">
+                                <input id="2" checked="checked" type="checkbox" class="frequency-toggle__input">
+                                <span class="frequency-toggle__mark" aria-hidden="true"></span>
+                                <span class="frequency-toggle__label"></span>
+                            </label>
+                            <label class="frequency-toggle">
+                                <input id="3" checked="checked" type="checkbox" class="frequency-toggle__input">
+                                <span class="frequency-toggle__mark" aria-hidden="true"></span>
+                                <span class="frequency-toggle__label"></span>
+                            </label>
+                            <label class="frequency-toggle">
+                                <input id="4" checked="checked" type="checkbox" class="frequency-toggle__input">
+                                <span class="frequency-toggle__mark" aria-hidden="true"></span>
+                                <span class="frequency-toggle__label"></span>
+                            </label>
+                            <label class="frequency-toggle">
+                                <input id="5" checked="checked" type="checkbox" class="frequency-toggle__input">
+                                <span class="frequency-toggle__mark" aria-hidden="true"></span>
+                                <span class="frequency-toggle__label"></span>
+                            </label>
+                            <label class="frequency-toggle">
+                                <input id="6" checked="checked" type="checkbox" class="frequency-toggle__input">
+                                <span class="frequency-toggle__mark" aria-hidden="true"></span>
+                                <span class="frequency-toggle__label"></span>
+                            </label>
+                            <label class="frequency-toggle">
+                                <input id="7" checked="checked" type="checkbox" class="frequency-toggle__input">
+                                <span class="frequency-toggle__mark" aria-hidden="true"></span>
+                                <span class="frequency-toggle__label"></span>
+                            </label>
+                        </div>
+                    </section>
+
+                    <section class="mode-switcher__section" data-frequency-group="horizontal">
+                        <p class="frequency-group__title">Горизонтальная поляризация</p>
+                        <div class="frequency-grid">
+                            <label class="frequency-toggle">
+                                <input id="8" checked="checked" type="checkbox" class="frequency-toggle__input">
+                                <span class="frequency-toggle__mark" aria-hidden="true"></span>
+                                <span class="frequency-toggle__label"></span>
+                            </label>
+                            <label class="frequency-toggle">
+                                <input id="9" checked="checked" type="checkbox" class="frequency-toggle__input">
+                                <span class="frequency-toggle__mark" aria-hidden="true"></span>
+                                <span class="frequency-toggle__label"></span>
+                            </label>
+                            <label class="frequency-toggle">
+                                <input id="10" checked="checked" type="checkbox" class="frequency-toggle__input">
+                                <span class="frequency-toggle__mark" aria-hidden="true"></span>
+                                <span class="frequency-toggle__label"></span>
+                            </label>
+                            <label class="frequency-toggle">
+                                <input id="11" checked="checked" type="checkbox" class="frequency-toggle__input">
+                                <span class="frequency-toggle__mark" aria-hidden="true"></span>
+                                <span class="frequency-toggle__label"></span>
+                            </label>
+                            <label class="frequency-toggle">
+                                <input id="12" checked="checked" type="checkbox" class="frequency-toggle__input">
+                                <span class="frequency-toggle__mark" aria-hidden="true"></span>
+                                <span class="frequency-toggle__label"></span>
+                            </label>
+                            <label class="frequency-toggle">
+                                <input id="13" checked="checked" type="checkbox" class="frequency-toggle__input">
+                                <span class="frequency-toggle__mark" aria-hidden="true"></span>
+                                <span class="frequency-toggle__label"></span>
+                            </label>
+                            <label class="frequency-toggle">
+                                <input id="14" checked="checked" type="checkbox" class="frequency-toggle__input">
+                                <span class="frequency-toggle__mark" aria-hidden="true"></span>
+                                <span class="frequency-toggle__label"></span>
+                            </label>
+                            <label class="frequency-toggle">
+                                <input id="15" checked="checked" type="checkbox" class="frequency-toggle__input">
+                                <span class="frequency-toggle__mark" aria-hidden="true"></span>
+                                <span class="frequency-toggle__label"></span>
+                            </label>
+                        </div>
+                    </section>
+                </div>
+
+                <section class="frequency-group frequency-group--combined is-hidden" id="row" data-frequency-group="combined">
+                    <p class="frequency-group__title" id="row_text">Обе поляризации</p>
+                    <div class="frequency-grid frequency-grid--compact">
+                        <label class="frequency-toggle">
+                            <input id="row-0" checked="checked" type="checkbox" class="frequency-toggle__input">
+                            <span class="frequency-toggle__mark" aria-hidden="true"></span>
+                            <span class="frequency-toggle__label"></span>
+                        </label>
+                        <label class="frequency-toggle">
+                            <input id="row-1" checked="checked" type="checkbox" class="frequency-toggle__input">
+                            <span class="frequency-toggle__mark" aria-hidden="true"></span>
+                            <span class="frequency-toggle__label"></span>
+                        </label>
+                        <label class="frequency-toggle">
+                            <input id="row-2" checked="checked" type="checkbox" class="frequency-toggle__input">
+                            <span class="frequency-toggle__mark" aria-hidden="true"></span>
+                            <span class="frequency-toggle__label"></span>
+                        </label>
+                        <label class="frequency-toggle">
+                            <input id="row-3" checked="checked" type="checkbox" class="frequency-toggle__input">
+                            <span class="frequency-toggle__mark" aria-hidden="true"></span>
+                            <span class="frequency-toggle__label"></span>
+                        </label>
+                        <label class="frequency-toggle">
+                            <input id="row-4" checked="checked" type="checkbox" class="frequency-toggle__input">
+                            <span class="frequency-toggle__mark" aria-hidden="true"></span>
+                            <span class="frequency-toggle__label"></span>
+                        </label>
+                        <label class="frequency-toggle">
+                            <input id="row-5" checked="checked" type="checkbox" class="frequency-toggle__input">
+                            <span class="frequency-toggle__mark" aria-hidden="true"></span>
+                            <span class="frequency-toggle__label"></span>
+                        </label>
+                        <label class="frequency-toggle">
+                            <input id="row-6" checked="checked" type="checkbox" class="frequency-toggle__input">
+                            <span class="frequency-toggle__mark" aria-hidden="true"></span>
+                            <span class="frequency-toggle__label"></span>
+                        </label>
+                        <label class="frequency-toggle">
+                            <input id="row-7" checked="checked" type="checkbox" class="frequency-toggle__input">
+                            <span class="frequency-toggle__mark" aria-hidden="true"></span>
+                            <span class="frequency-toggle__label"></span>
+                        </label>
+                    </div>
+                </section>
+
+                <section class="mode-drawer is-hidden">
+                    <div class="mode-drawer__header">
+                        <p class="mode-drawer__title">Добавить режим</p>
+                        <button id="custom" class="button button--ghost" type="button">Кастомный</button>
+                    </div>
+                    <div class="mode-drawer__grid">
+                        <button id="mode-sequential-pairs" class="button button--option mode-drawer__button" type="button" data-command="m 1">Режим последовательно включать каждую из частот попарно</button>
+                        <button id="mode-sequential" class="button button--option mode-drawer__button" type="button" data-command="m 2">Режим последовательно включать каждую из частот</button>
+                        <button id="mode-all" class="button button--option mode-drawer__button" type="button" data-command="m 4">Режим включать все</button>
+                        <button id="mode-horizontal" class="button button--option mode-drawer__button" type="button" data-command="m 5">Режим включать все горизонтальные</button>
+                        <button id="mode-vertical" class="button button--option mode-drawer__button" type="button" data-command="m 6">Режим включать все вертикальные</button>
+                    </div>
+                </section>
+
+                <section class="custom-mode is-hidden">
+                    <div class="custom-mode__field">
+                        <span>Название режима:</span>
+                        <input id="nameCustom" class="input" type="text" placeholder="Например, Дежурный">
+                    </div>
+                    <div class="custom-mode__field">
+                        <span>Время между переключениями (секунды):</span>
+                        <input id="timeCustom" class="input" type="number" min="0" placeholder="10">
+                    </div>
+                    <div class="custom-mode__options">
+                        <label class="frequency-toggle custom-mode__option">
+                            <input id="custom1" type="checkbox" class="frequency-toggle__input">
+                            <span class="frequency-toggle__mark" aria-hidden="true"></span>
+                            <span class="frequency-toggle__label">Режим импульсный</span>
+                        </label>
+                        <label class="frequency-toggle custom-mode__option">
+                            <input id="custom3" type="checkbox" class="frequency-toggle__input">
+                            <span class="frequency-toggle__mark" aria-hidden="true"></span>
+                            <span class="frequency-toggle__label">Режим импульсный (попарно)</span>
+                        </label>
+                        <label class="frequency-toggle custom-mode__option">
+                            <input id="custom2" type="checkbox" class="frequency-toggle__input">
+                            <span class="frequency-toggle__mark" aria-hidden="true"></span>
+                            <span class="frequency-toggle__label">Режим непрерывно</span>
+                        </label>
+                    </div>
+                </section>
+            </section>
+
+            <aside class="dashboard__rail" id="block-4" data-block-id="4">
+                <div class="dashboard__rail-row" id="block-5" data-block-id="5">
+                    <section class="panel panel--status" id="block-7" data-block-id="7">
+                        <span class="panel__status">Не подключен</span>
+                        <button class="button button--secondary" id="add_port" type="button">Установить порт</button>
+                    </section>
+                    <section class="panel panel--emergency" id="block-8" data-block-id="8">
+                        <span class="panel__status">Аварийная остановка</span>
+                        <button id="emergencyStop" class="button button--danger" type="button">Остановить</button>
+                    </section>
+                </div>
+
+                <section class="panel panel--telemetry" id="block-6" data-block-id="6">
+                    <div class="telemetry-card">
+                        <div class="telemetry-card__header">
+                            <div>
+                                <p class="panel__eyebrow">Состояние системы</p>
+                                <h3 class="panel__title">Сигнализации</h3>
+                            </div>
+                            <span class="telemetry-card__note">Статусы и напряжение</span>
+                        </div>
+                        <div class="telemetry-card__signals">
+                            <span id="signaling1" class="signal-dot"></span>
+                            <span id="signaling2" class="signal-dot"></span>
+                            <span id="signaling3" class="signal-dot"></span>
+                            <span id="signaling4" class="signal-dot"></span>
+                        </div>
+                        <div class="telemetry-card__rows">
+                            <div class="telemetry-card__row">
+                                <span>Дополнительная подзарядка</span>
+                                <span id="additionalCharge">--</span>
+                            </div>
+                            <div class="telemetry-card__row">
+                                <span>Количество активных модулей</span>
+                                <span id="activeModules">--</span>
+                            </div>
+                            <div class="telemetry-card__row">
+                                <span>Напряжение батареи</span>
+                                <span id="voltage">--</span>
+                            </div>
+                            <div class="telemetry-card__row telemetry-card__row--action">
+                                <button id="disable_fan" class="button button--ghost" type="button">Отключить</button>
+                                <span>Вентилятор</span>
+                                <span id="fan1">--</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </aside>
+        </section>
+
+        <section class="panel panel--timer">
+            <div class="timer-card">
+                <div class="timer-card__header">
+                    <p class="panel__eyebrow">Автоотключение</p>
+                    <h2 class="panel__title">Таймер автоматического отключения</h2>
+                </div>
+                <div class="timer-card__body">
+                    <div class="timer-card__info">
+                        <p class="timer-card__label">Осталось</p>
+                        <span id="time" class="timer-card__value">00:00</span>
+                    </div>
+                    <div class="timer-card__dial">
+                        <svg class="progress-ring" width="120" height="120" viewBox="0 0 120 120" aria-hidden="true">
+                            <circle class="progress-ring__background" cx="60" cy="60" r="54"></circle>
+                            <circle class="progress-ring__circle" cx="60" cy="60" r="54"></circle>
+                        </svg>
+                        <button class="timer-play" id="timer-play" type="button">
+                            <span class="timer-play__icon" id="play-icon">▶</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="time-presets">
+                <div class="time-presets__header">
+                    <p>Выбрать время</p>
+                    <span id="add-time">Выберите пресет</span>
+                </div>
+                <div class="time-presets__content" id="frequent-times"></div>
+            </div>
+        </section>
+
+        <section class="panel panel--charts" id="block-2" data-block-id="2">
+            <article class="chart-panel">
+                <div class="chart-panel__header">
+                    <h3 class="chart-panel__title">Вертикальная поляризация</h3>
+                    <span class="chart-panel__accent"></span>
+                </div>
+                <canvas id="verticalChart" class="chart-panel__canvas"></canvas>
+            </article>
+            <article class="chart-panel">
+                <div class="chart-panel__header">
+                    <h3 class="chart-panel__title">Горизонтальная поляризация</h3>
+                    <span class="chart-panel__accent"></span>
+                </div>
+                <canvas id="horizontalChart" class="chart-panel__canvas"></canvas>
+            </article>
+        </section>
+    </main>
+
+    <section class="overlay overlay--ports is-hidden">
+        <div class="overlay__scrim"></div>
+        <div class="overlay__card">
+            <h3 class="overlay__title">Добавить порт</h3>
+            <input class="input input--field" placeholder="Введите порт" type="text">
+            <div class="overlay__actions">
+                <button class="button button--primary" id="accept_add_port" type="button">Подключить</button>
+                <button class="button button--ghost" id="cancel_add_port" type="button">Отменить</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="time-modal" class="modal modal--time is-hidden">
+        <div class="modal__card">
+            <label for="time-input">Введите время в секундах:</label>
+            <input type="number" id="time-input" min="0" class="input input--field">
+            <div class="modal__actions">
+                <button class="button button--primary" id="confirm-time" type="button">Установить</button>
+                <button class="button button--ghost" id="cancel-time" type="button">Отмена</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="notification is-hidden">
+        <div class="notification__body">
+            <h3 class="notification__title"></h3>
+            <p class="notification__message"></p>
+        </div>
+        <button class="notification__close" type="button" aria-label="Закрыть уведомление"></button>
+    </section>
+
+    <section class="alert-overlay is-hidden">
+        <div class="alert-overlay__scrim"></div>
+        <div class="alert-card">
+            <h4 class="alert-card__title">Сработала сигнализация</h4>
+            <span class="alert-card__message">Высокая температура!</span>
+            <p id="timer" class="alert-card__timer"></p>
+            <div class="alert-card__actions">
+                <button class="button button--primary alert-card__continue" type="button">Продолжить</button>
+                <button class="button button--danger alert-card__disable" type="button">Отключить блок модулей</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="delete-dialog is-hidden">
+        <div class="delete-dialog__scrim"></div>
+        <div class="delete-dialog__card">
+            <span id="delete_text">Действительно хотите удалить кастомный режим?</span>
+            <div class="delete-dialog__actions">
+                <button id="cancel-delete" class="button button--ghost" type="button">Отменить</button>
+                <button id="accept-delete" class="button button--danger" type="button">Удалить</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="loader" aria-live="polite">
+        <div class="loader__dots" aria-hidden="true">
+            <span class="loader__dot"></span>
+            <span class="loader__dot"></span>
+            <span class="loader__dot"></span>
+        </div>
+        <span class="loader__label">Подключение</span>
+    </section>
+</div>
+</body>
+</html>
